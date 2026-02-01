@@ -13,6 +13,10 @@ Currently working on LLM Architecture, LLM Memory, [Experience](https://storage.
 
 <u>I am always open to collaboration!</u>
 
+<p>
+Feel free to contact me at [yinxignkun] [at] [connect] [dot] [hku] [dot] [hk]
+</p>
+
 <!-- 
 A data-driven personal website
 ======
