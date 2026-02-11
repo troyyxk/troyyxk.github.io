@@ -17,9 +17,12 @@
     {% if post.collection == 'publications' and post.image %}
       <div class="pub-card__layout">
         <div class="pub-card__image">
+          {% assign img_first_char = post.image | slice: 0 %}
           <img src=
             {% if post.image contains "://" %}
               "{{ post.image }}"
+            {% elsif img_first_char == "/" %}
+              "{{ post.image | prepend: base_path }}"
             {% else %}
               "{{ post.image | prepend: "/images/" | prepend: base_path }}"
             {% endif %}
