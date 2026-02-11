@@ -26,6 +26,18 @@ As always, GLHF!
 {% include base_path %}
 
 {% if site.publication_category %}
+  {% for post in site.publications reversed %}
+    {% assign has_known_category = false %}
+    {% for category in site.publication_category %}
+      {% if post.category == category[0] %}
+        {% assign has_known_category = true %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+    {% unless has_known_category %}
+      {% include archive-single.html %}
+    {% endunless %}
+  {% endfor %}
   {% for category in site.publication_category %}
     {% assign title_shown = false %}
     {% for post in site.publications reversed %}

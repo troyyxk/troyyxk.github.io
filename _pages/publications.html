@@ -13,6 +13,20 @@ author_profile: true
 
 <!-- New style rendering if publication categories are defined -->
 {% if site.publication_category %}
+  <!-- First: render publications that have no category or unrecognized category (no subtitle) -->
+  {% for post in site.publications reversed %}
+    {% assign has_known_category = false %}
+    {% for category in site.publication_category %}
+      {% if post.category == category[0] %}
+        {% assign has_known_category = true %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+    {% unless has_known_category %}
+      {% include archive-single.html %}
+    {% endunless %}
+  {% endfor %}
+  <!-- Then: render publications grouped by defined categories -->
   {% for category in site.publication_category  %}
     {% assign title_shown = false %}
     {% for post in site.publications reversed %}
