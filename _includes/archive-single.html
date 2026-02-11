@@ -14,6 +14,19 @@
 
 <div class="{{ include.type | default: "list" }}__item{% if post.collection == 'publications' %} pub-card{% endif %}">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    {% if post.collection == 'publications' and post.image %}
+      <div class="pub-card__layout">
+        <div class="pub-card__image">
+          <img src=
+            {% if post.image contains "://" %}
+              "{{ post.image }}"
+            {% else %}
+              "{{ post.image | prepend: "/images/" | prepend: base_path }}"
+            {% endif %}
+            alt="{{ post.title }}">
+        </div>
+        <div class="pub-card__content">
+    {% endif %}
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
         <img src=
@@ -80,5 +93,9 @@
       <p><a href="{{ post.bibtexurl }}">Download Bibtex</a></p>
     {% endif %}
 
+    {% if post.collection == 'publications' and post.image %}
+        </div><!-- /.pub-card__content -->
+      </div><!-- /.pub-card__layout -->
+    {% endif %}
   </article>
 </div>

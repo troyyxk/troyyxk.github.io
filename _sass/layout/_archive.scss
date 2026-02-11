@@ -108,6 +108,53 @@
   }
 }
 
+/* Publication card horizontal layout with image */
+.pub-card__layout {
+  display: flex;
+  gap: 1.5em;
+  align-items: flex-start;
+}
+
+.pub-card__image {
+  flex: 0 0 200px;
+  max-width: 200px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--global-border-color, #eee);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+}
+
+.pub-card__content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Responsive: stack vertically on small screens */
+@media (max-width: 600px) {
+  .pub-card__layout {
+    flex-direction: column;
+  }
+
+  .pub-card__image {
+    flex: none;
+    max-width: 100%;
+    width: 100%;
+
+    img {
+      max-height: 200px;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+}
+
 html[data-theme="dark"] .pub-card {
   background: var(--global-dark-border-color, #555);
   border-color: var(--global-border-color, #888);
@@ -116,6 +163,11 @@ html[data-theme="dark"] .pub-card {
   &:hover {
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
   }
+}
+
+html[data-theme="dark"] .pub-card__image {
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 
