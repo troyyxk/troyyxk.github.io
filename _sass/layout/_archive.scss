@@ -90,7 +90,7 @@
    ========================================================================== */
 
 .pub-card {
-  background: var(--global-background-color, #fff);
+  background: var(--global-bg-color, #fff);
   border: 1px solid var(--global-border-color, #e0e0e0);
   border-radius: 8px;
   padding: 1.2em 1.5em;
@@ -105,6 +105,16 @@
 
   .archive__item-title {
     margin-top: 0;
+  }
+}
+
+html[data-theme="dark"] .pub-card {
+  background: var(--global-dark-border-color, #555);
+  border-color: var(--global-border-color, #888);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+
+  &:hover {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
   }
 }
 
