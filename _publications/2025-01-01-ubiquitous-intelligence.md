@@ -6,6 +6,6 @@ permalink: /publication/2025-01-01-ubiquitous-intelligence
 image: 2025-01-01-ubiquitous-intelligence.png
 venue: 'npj Wireless Technology'
 paperurl: 'https://www.nature.com/articles/s44386-025-00010-7'
-citation: 'Xingkun Yin, Feifei You, Hongyang Du, Kaibin Huang. (2025). &quot;Ubiquitous Intelligence Via Wireless Network-Driven LLMs Evolution.&quot; <i>npj Wireless Technology</i>, 2(4).'
+description: 'We introduce ubiquitous intelligence as a paradigm where LLMs evolve within wireless network-driven ecosystems.'
 ---
 
