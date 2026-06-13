@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I' Xingkun Yin, a first-year PhD student at [NICE LAB](https://hongyangdu.github.io/nice/), from Department of Electrical and Electronic Engineering, The University of Hong Kong. I am very fortunate to be advised by Professor [Hongyang Du](https://hongyangdu.github.io/).
+I'm Xingkun Yin, a first-year PhD student at [NICE LAB](https://hongyangdu.github.io/nice/), from Department of Electrical and Electronic Engineering, The University of Hong Kong. I am very fortunate to be advised by Professor [Hongyang Du](https://hongyangdu.github.io/).
 
 Currently working on LLM Architecture, LLM Memory, [Experience](https://storage.googleapis.com/deepmind-media/Era-of-Experience%20/The%20Era%20of%20Experience%20Paper.pdf), Video Generation.
 
