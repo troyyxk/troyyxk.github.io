@@ -159,6 +159,16 @@ analytics:
   google:
     tracking_id          :
 
+# Visitor map
+# Create a widget at https://mapmyvisitors.com/add, then paste the
+# MapMyVisitors-generated embed snippet below. Keep this disabled until the
+# snippet has been configured so no visitor data is sent to a third party by
+# default.
+visitor_map:
+  enabled                : true
+  embed                  : >-
+    <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=Ye0Dk-F0wA1y00X-GlbcgO1w4GqP_OKsYRQlbxLTFZw&cl=ffffff&w=a"></script>
+
 
 # Reading Files
 include:
