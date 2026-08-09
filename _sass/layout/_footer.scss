@@ -94,21 +94,3 @@
     }
   }
 }
-
-.visitor-map {
-  margin: 0 0 1em;
-  width: 100%;
-
-  #mapmyvisitors-widget {
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  // Provider widgets commonly render an image or iframe; keep them within the
-  // footer on narrow screens without changing the widget's intrinsic size.
-  img,
-  iframe {
-    max-width: 100%;
-  }
-}
