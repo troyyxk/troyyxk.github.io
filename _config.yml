@@ -170,16 +170,16 @@ analytics:
 
   # StatCounter：https://statcounter.com/sign-up/ 注册后，项目名右侧扳手图标 → Security Code
   statcounter:
-    project              :  ""     # 项目 ID（纯数字），例如 12345678
-    security             :  ""     # 安全码，例如 "a1b2c3d4"
-    invisible            :  true   # true = 页面上不显示可见的计数器图标
+    project              :  "13356231"   # 项目 ID（纯数字）
+    security             :  "dbc1a2c8"   # 安全码
+    invisible            :  true         # true = 页面上不显示可见的计数器图标
 
   # Umami Cloud：https://cloud.umami.is/signup 注册（Hobby 免费版）
   umami:
-    website_id           :  ""     # Edit website → Tracking code 里的 data-website-id
+    website_id           :  "48ede5d7-aa09-4f7d-a40e-85a035c88f21"  # ✅ 已填（data-website-id）
     src                  :  "https://cloud.umami.is/script.js"
     domains              :  ""     # 留空 = 自动使用站点域名；填了就只统计这些域名（逗号分隔），避免本地预览污染数据
-    share_url            :  ""     # Edit website → Share URL 生成的公开链接，供 /visitors/ 页面使用
+    share_url            :  "https://cloud.umami.is/share/AYVDrYWtbQUWOLZG"  # ✅ 已填，供 /visitors/ 页面公开展示
 
   google:
     tracking_id          :

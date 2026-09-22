@@ -22,49 +22,66 @@
 
 ---
 
-## 1. 注册 StatCounter（负责记录真实 IP）
+## 1. ✅ StatCounter（负责记录真实 IP）—— 已配置完成
 
-1. 打开 <https://statcounter.com/sign-up/> 注册一个免费账号。
-2. 添加项目（Add Project / 新建 Project）：
-   - **Website URL** 填 `https://troyyxk.github.io`
-   - 其他选项随意，**Counter 选 Invisible**（页面上不显示计数器图标）
-3. 记录两个值（登录后 → 项目名右侧的**扳手 🔧 图标** → 左侧菜单 **Security Code**）：
-   - **Project ID**：一串纯数字，例如 `12345678`
-   - **Security Code**：一串字母数字，例如 `a1b2c3d4`
+已经用你的账号信息填好了，**这一步不需要再做任何事**：
 
-## 2. 注册 Umami Cloud（负责公开的城市/地区地图）
+| 项目 | 值 |
+| --- | --- |
+| Project ID | `13356231` |
+| Security Code | `dbc1a2c8` |
+| 计数器显示 | Invisible（页面上不显示图标） |
 
-1. 打开 <https://cloud.umami.is/signup> 注册（**Hobby 套餐永久免费**）。
-2. **Add website** → Domain 填 `troyyxk.github.io`。
-3. 点该网站的 **Edit** 按钮，在 **Tracking code** 区域找到 `data-website-id` 的值，
-   形如 `3f0a1b2c-1234-5678-9abc-0123456789ab`。
-4. 同一个 Edit 页面里找到 **Share URL** → 点 **Add**：
-   - 勾选你想公开的视图（建议**只勾 Overview / Sessions / Realtime** 这类聚合视图）
-   - 保存后会生成一个形如 `https://cloud.umami.is/share/AbCdEfGh` 的公开链接
+> 这两个值本身就写在网页源码里（任何客户端计数器都必须如此），所以放在公开仓库里没有问题。
+> 别人拿到它们最多只能往你的统计里灌垃圾数据，读不到你的后台。
+
+如果以后要换项目，登录 <https://statcounter.com/> → 项目名右侧的**扳手 🔧 图标** →
+左侧菜单 **Security Code**，把新值填回 `_config.yml`。
+
+## 2. ✅ Umami Cloud（负责公开的城市/地区地图）—— 已配置完成
+
+1. ✅ 已注册：<https://cloud.umami.is/signup>（**Hobby 套餐永久免费**）
+2. ✅ 已添加站点（Domain = `troyyxk.github.io`）
+3. ✅ 已取得 `data-website-id` 并填入 `_config.yml`
+4. ✅ 已生成 **Share URL** 并填入 `_config.yml`：
+   `https://cloud.umami.is/share/AYVDrYWtbQUWOLZG`
+
+> **Share URL 是可公开的**：任何拿到这个链接的人都能看到里面的聚合报表。
+> 如果你以后想收回，去 Umami 的 **Edit → Share URL** 把它删掉，同时把
+> `_config.yml` 里的 `share_url` 清空，`/visitors/` 页面就会自动退回占位提示。
+
+> ✅ **已实测**：这个 Share URL 可以被本站的 iframe 正常嵌入（Umami 返回的是
+> CSP `frame-ancestors *`，会覆盖它同时返回的 `x-frame-options: SAMEORIGIN`）。
+> 用无头 Chrome 验证过，仪表盘能完整渲染；同一次测试里 github.com 作为对照确实被拦，
+> 证明测试方法本身是有效的。
+
+> ⚠️ **不要把 Umami 给你的那段 `<script>` 代码手动粘到任何文件里**。只需要复制
+> `data-website-id` 这一个值——统计代码由 `_config.yml` 自动生成，手动再粘一遍会导致
+> 同一页面加载两次脚本、数据翻倍。
 
 ---
 
-## 3. 把值填进 `_config.yml`
+## 3. `_config.yml` 当前状态
 
-打开根目录的 `_config.yml`，找到 `analytics:` 这一段，把上面拿到的值填进去：
+**全部填好了，不需要再改任何东西**：
 
 ```yaml
 analytics:
-  provider: "custom"          # ← 已经帮你改好了，不要改回 "false"
+  provider: "custom"                    # 已设好，不要改回 "false"
 
   statcounter:
-    project: "12345678"                 # ← 你的 Project ID
-    security: "a1b2c3d4"                # ← 你的 Security Code
-    invisible: true                     # 保持 true，页面上不显示计数器
+    project: "13356231"                 # ✅ 已填（Project ID）
+    security: "dbc1a2c8"                # ✅ 已填（Security Code）
+    invisible: true                     # ✅ 页面上不显示计数器图标
 
   umami:
-    website_id: "3f0a1b2c-1234-5678-9abc-0123456789ab"   # ← 你的 website id
+    website_id: "48ede5d7-aa09-4f7d-a40e-85a035c88f21"        # ✅ 已填（data-website-id）
     src: "https://cloud.umami.is/script.js"
     domains: ""                         # 留空 = 自动用站点域名
-    share_url: "https://cloud.umami.is/share/AbCdEfGh"   # ← 你的 Share URL
+    share_url: "https://cloud.umami.is/share/AYVDrYWtbQUWOLZG" # ✅ 已填（公开仪表盘）
 ```
 
-保存后提交：
+改完后提交：
 
 ```bash
 git add _config.yml
@@ -74,8 +91,8 @@ git push
 
 GitHub Pages 会在 1～2 分钟后自动重新构建。
 
-> 两个服务都可以只填一个：只填 StatCounter 就只记录 IP，只填 Umami 就只看城市分布。
-> 两个都不填时，页面**不会输出任何统计代码**。
+> 两个服务互相独立：填了 StatCounter 就记录 IP，填了 Umami 才能看城市分布。
+> 两个 ID 都为空时，页面**不会输出任何统计代码**（已验证，不会影响页面）。
 
 ---
 
@@ -83,10 +100,17 @@ GitHub Pages 会在 1～2 分钟后自动重新构建。
 
 1. 等 GitHub Pages 构建完成，用浏览器打开 <https://troyyxk.github.io/>。
 2. 按 `F12` 打开开发者工具 → **Network** 面板，刷新页面，搜索 `statcounter` 或 `umami`：
-   - 应该能看到 `counter.js` 和 `script.js` 被加载
+   - 应该能看到 `counter.js`（StatCounter）和 `script.js`（Umami）**两个都被加载**
+   - 如果 `script.js` 出现了但 Network 里紧跟一个对 `api.umami.is/api/send` 的请求，
+     说明上报成功
 3. 或者直接看后台：
    - StatCounter：**Live update / 实时访客**，正常的话几秒内就会出现你自己这次访问
-   - Umami：**Realtime** 面板
+   - Umami：**Realtime** 面板，同样是几秒内
+4. 打开 <https://troyyxk.github.io/visitors/>，应该能看到 Umami 仪表盘嵌在页面里
+   （刚上线时数字都是 0，属于正常）
+
+> ⚠️ 以上都只在**线上域名**生效。Umami 带了 `data-domains="troyyxk.github.io"`，
+> 所以你本地 `jekyll serve` 打开 localhost 时 `script.js` 会被加载但**不会上报**，这是故意的。
 
 ### 在 StatCounter 后台哪里看 IP
 
