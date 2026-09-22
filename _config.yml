@@ -154,8 +154,33 @@ social:
 
 
 # Analytics
+# ─────────────────────────────────────────────────────────────────────────────
+# 访客统计配置。详细注册步骤见根目录 VISITOR_ANALYTICS.md
+#
+# provider 必须设为 "custom"，_includes/analytics-providers/custom.html 里的
+# 自定义统计代码才会被加载（加载位置：每个页面 </body> 之前）。
+#
+# 这里启用了两个服务，分工不同：
+#   StatCounter → 后台可看到【真实访客 IP】+ ISP + 时间戳 + 停留时长 + 浏览路径
+#                 （免费版只保留最近 500 条明细，汇总图表不限量）
+#   Umami       → 提供可公开分享的【城市 / 地区地图】和访问量图表
+#                 （Umami 出于隐私设计【不保存原始 IP】，只存 IP 派生的哈希）
 analytics:
-  provider               :  "false" # false (default), "google", "google-universal", "google-analytics-4", "custom"
+  provider               :  "custom" # false (default), "google", "google-universal", "google-analytics-4", "custom"
+
+  # StatCounter：https://statcounter.com/sign-up/ 注册后，项目名右侧扳手图标 → Security Code
+  statcounter:
+    project              :  ""     # 项目 ID（纯数字），例如 12345678
+    security             :  ""     # 安全码，例如 "a1b2c3d4"
+    invisible            :  true   # true = 页面上不显示可见的计数器图标
+
+  # Umami Cloud：https://cloud.umami.is/signup 注册（Hobby 免费版）
+  umami:
+    website_id           :  ""     # Edit website → Tracking code 里的 data-website-id
+    src                  :  "https://cloud.umami.is/script.js"
+    domains              :  ""     # 留空 = 自动使用站点域名；填了就只统计这些域名（逗号分隔），避免本地预览污染数据
+    share_url            :  ""     # Edit website → Share URL 生成的公开链接，供 /visitors/ 页面使用
+
   google:
     tracking_id          :
 
@@ -170,6 +195,7 @@ exclude:
   - .asset-cache
   - .bundle
   - .github
+  - VISITOR_ANALYTICS.md
   - .jekyll-assets-cache
   - .sass-cache
   - assets/js/_main.js

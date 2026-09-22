@@ -1,3 +1,45 @@
 <!-- start custom analytics snippet -->
+{%- comment -%}
+  自定义访客统计代码，由 _config.yml 的 analytics.* 配置驱动。
+    · StatCounter → 记录真实访客 IP / ISP / 时间戳 / 停留时长（只有登录 statcounter.com 才能看到）
+    · Umami       → 记录访问量、来源、城市 / 地区，可通过 Share URL 公开分享
+  两个 ID 都留空时，本文件不输出任何内容，不会影响页面。
+  详细注册步骤见根目录 VISITOR_ANALYTICS.md
+{%- endcomment -%}
+
+{%- assign sc_project = site.analytics.statcounter.project | default: "" | strip -%}
+{%- assign sc_security = site.analytics.statcounter.security | default: "" | strip -%}
+{%- if sc_project != "" and sc_security != "" %}
+<!-- StatCounter: 真实访客 IP / ISP / 时间戳 / 停留时长 / 浏览路径 -->
+<script>
+  var sc_project = {{ sc_project }};
+  var sc_invisible = {% if site.analytics.statcounter.invisible == false %}0{% else %}1{% endif %};
+  var sc_security = "{{ sc_security }}";
+</script>
+<script src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript>
+  <div class="statcounter">
+    <a title="Web Analytics" href="https://statcounter.com/" target="_blank" rel="noopener">
+      <img class="statcounter"
+           src="https://c.statcounter.com/{{ sc_project }}/0/{{ sc_security }}/1/"
+           alt="Web Analytics"
+           referrerpolicy="no-referrer-when-downgrade" />
+    </a>
+  </div>
+</noscript>
+{%- endif %}
+
+{%- assign umami_id = site.analytics.umami.website_id | default: "" | strip -%}
+{%- assign umami_domains = site.analytics.umami.domains | default: "" | strip -%}
+{%- if umami_domains == "" -%}
+  {%- assign umami_domains = site.url | default: "" | remove: "https://" | remove: "http://" | split: "/" | first -%}
+{%- endif -%}
+{%- if umami_id != "" %}
+<!-- Umami: 访问量 / 来源 / 城市地区分布（data-domains 用来排除本地预览产生的数据） -->
+<script defer
+        src="{{ site.analytics.umami.src | default: 'https://cloud.umami.is/script.js' }}"
+        data-website-id="{{ umami_id }}"{% if umami_domains and umami_domains != "" %}
+        data-domains="{{ umami_domains }}"{% endif %}></script>
+{%- endif %}
 
 <!-- end custom analytics snippet -->

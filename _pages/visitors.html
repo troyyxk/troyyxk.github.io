@@ -1,0 +1,22 @@
+---
+layout: single
+title: "访客统计"
+permalink: /visitors/
+author_profile: true
+sitemap: false
+---
+
+{% assign share_url = site.analytics.umami.share_url | default: "" | strip %}
+
+<p>这里展示的是<strong>聚合后</strong>的访问数据：访问量、来源、以及城市 / 地区分布。
+页面不会显示任何访客的 IP 地址或身份信息，原始 IP 只在 StatCounter 的私有后台里可见。</p>
+
+{% if share_url != "" %}
+  <p><a class="btn btn--primary" href="{{ share_url }}" target="_blank" rel="noopener">在新窗口打开完整仪表盘 ↗</a></p>
+  <p style="font-size:0.8em;color:#666;">如果下方图表没有加载出来，说明统计服务不允许被嵌入到其他网站，请直接使用上面的按钮。</p>
+  <iframe src="{{ share_url }}" title="访客统计仪表盘" loading="lazy" style="width:100%;height:900px;border:none;"></iframe>
+{% else %}
+  <p><em>还没有配置公开的统计仪表盘。</em></p>
+  <p>请先在 Umami 里生成一个 Share URL，然后填入 <code>_config.yml</code> 的
+  <code>analytics.umami.share_url</code>。具体步骤见根目录的 <code>VISITOR_ANALYTICS.md</code>。</p>
+{% endif %}

@@ -31,3 +31,9 @@ main:
     
   # - title: "Guide"
   #   url: /markdown/
+
+  # 访客统计页面（聚合展示访问量 / 来源 / 城市地区分布）。
+  # 想让它出现在顶部导航栏，就把下面两行前面的 "# " 去掉。
+  # 注意：需要先在 _config.yml 里填好 analytics.umami.share_url，否则页面是空的。
+  # - title: "Visitors"
+  #   url: /visitors/
