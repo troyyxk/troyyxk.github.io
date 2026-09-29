@@ -252,12 +252,40 @@ html[data-theme="dark"] .lang-toggle__button.is-active {
   justify-content: flex-start;
 }
 
-.author__avatar img {
+/* The theme caps the avatar wrapper at 36px, which would clip the resized
+   image and let the name overlap it. Let the wrapper size to the image. */
+.profile_box > .author__avatar {
+  display: block;
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+}
+
+/* The theme puts .author__avatar on the wrapper *and* on the <img>, so the
+   image itself is laid out as a 36px table cell on small screens. Reset it to
+   a real image. The source photo is portrait, so a square box with
+   object-fit: cover is what actually produces a circle rather than an oval. */
+img.author__avatar {
+  display: block;
+  width: 76px;
+  height: 76px;
+  min-width: 0;
+  max-width: none;
+  object-fit: cover;
   border-radius: 50%;
   border: 1px solid var(--rs-border);
   padding: 4px;
   background: var(--rs-card);
   box-shadow: var(--rs-shadow-sm);
+}
+
+@media (min-width: 57.8125em) {
+  img.author__avatar {
+    width: 100%;
+    height: auto;
+    max-width: 175px;
+    aspect-ratio: 1 / 1;
+  }
 }
 
 .author__name {
