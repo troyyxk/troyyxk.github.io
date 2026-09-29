@@ -34,15 +34,15 @@ redirect_from:
 
 <div class="about-summary lang-en lang-block">
 <p>I am a second-year Ph.D. student at <a href="https://hongyangdu.github.io/nice/">NICE Lab</a>, Department of Electrical and Computer Engineering, The University of Hong Kong, fortunate to be advised by Professor <a href="https://hongyangdu.github.io/">Hongyang Du</a>.</p>
-<p>My current research centres on <strong>LLM architecture</strong>, <strong>LLM memory</strong>, <strong>experience-driven model evolution</strong>, and <strong>video generation</strong>. I like problems that sit between systems efficiency and model capability &mdash; making large models cheaper to run without giving up what makes them useful.</p>
-<p>What excites me most is the idea of models that keep evolving and thinking for themselves the way a human brain does &mdash; learning from experience long after training ends, instead of staying frozen the moment they are deployed.</p>
+<p>My research interests include <strong>LLM architecture</strong>, <strong>LLM memory</strong>, <strong>experience-driven model evolution</strong>, and <strong>video generation</strong>. I am especially interested in the intersection of model capability and system efficiency.</p>
+<p>What excites me most is the idea of models that keep evolving, reasoning, and learning from experience after training &mdash; more like a human brain, with learning continuing throughout their lifetime, thus achieving Artificial General Intelligence (AGI) and recursive self-improvement (RSI).</p>
 <p><u>I am always open to collaboration.</u> If any of the directions above overlaps with your work, please do get in touch.</p>
 </div>
 
 <div class="about-summary lang-zh lang-block">
 <p>我是香港大学电机与计算机工程系 <a href="https://hongyangdu.github.io/nice/">NICE Lab</a> 的二年级博士研究生，很荣幸由 <a href="https://hongyangdu.github.io/">杜泓阳</a>教授指导。</p>
-<p>目前的研究兴趣包括<strong>大模型架构</strong>、<strong>大模型记忆</strong>、<strong>经验驱动的模型演化</strong>与<strong>视频生成</strong>。我关注系统效率与模型能力之间的交叉问题：在不让模型失去价值的前提下，让大模型跑得更便宜。</p>
-<p>最让我兴奋的，是让模型像人脑一样持续进化、自己思考 —— 在训练结束之后依然能从经验中不断学习，而不是在部署的那一刻就定型。</p>
+<p>我的研究兴趣包括<strong>大模型架构</strong>、<strong>大模型记忆</strong>、<strong>经验驱动的模型演化</strong>和<strong>视频生成</strong>。我尤其关注模型能力与系统效率之间的交叉问题。</p>
+<p>最让我兴奋的研究课题，是让模型在训练结束后依然能够持续进化、思考并从经验中学习，就像人脑一样，让学习贯穿模型的整个生命周期，从而实现通用人工智能（AGI）与递归自我改进（RSI）。</p>
 <p><u>非常欢迎合作。</u>如果上面的方向与你的研究有交集，欢迎随时联系我。</p>
 </div>
 
