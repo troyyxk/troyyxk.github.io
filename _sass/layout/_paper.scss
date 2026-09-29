@@ -22,13 +22,14 @@
    eye lands on. The flag borrows the primary button's fill — accent with white
    text in the light theme, the lighter accent with dark text in the dark theme
    — which is what keeps it sitting on the page instead of fighting it. An
-   accepted paper names its venue and nothing else: no preprint id after it. */
+   accepted paper names its venue and nothing else: no preprint id after it.
+   The label keeps its own capitalisation: the venue names are spelled the way
+   their owners spell them (NeurIPS, npj, arXiv), so no text-transform here. */
 .paper-hero__venue {
   margin: 0 0 0.6rem;
   font-size: 0.78rem;
   font-weight: 700;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
+  letter-spacing: 0.02em;
   color: var(--rs-accent);
 }
 
