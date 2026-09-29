@@ -49,10 +49,10 @@ redirect_from:
 <h2 id="research"><span class="lang-en lang-inline">Research Interests</span><span class="lang-zh lang-inline">研究方向</span></h2>
 
 <div class="research-focus">
-  <h3><span class="lang-en lang-inline">LLM Architecture</span><span class="lang-zh lang-inline">大模型架构</span></h3>
-  <p><span class="lang-en lang-inline">Efficient architectures and inference-time acceleration for large language and diffusion transformers.</span><span class="lang-zh lang-inline">面向大语言模型与扩散 Transformer 的高效架构与推理加速。</span></p>
   <h3><span class="lang-en lang-inline">LLM Memory</span><span class="lang-zh lang-inline">大模型记忆</span></h3>
   <p><span class="lang-en lang-inline">Memory representation, retrieval and realignment for models that operate in dynamic, changing environments.</span><span class="lang-zh lang-inline">面向动态环境的记忆表示、检索与对齐。</span></p>
+  <h3><span class="lang-en lang-inline">LLM Architecture</span><span class="lang-zh lang-inline">大模型架构</span></h3>
+  <p><span class="lang-en lang-inline">Efficient architectures and inference-time acceleration for large language and diffusion transformers.</span><span class="lang-zh lang-inline">面向大语言模型与扩散 Transformer 的高效架构与推理加速。</span></p>
   <h3><span class="lang-en lang-inline">Experience-Driven Evolution</span><span class="lang-zh lang-inline">经验驱动的模型演化</span></h3>
   <p><span class="lang-en lang-inline">Post-deployment and experience scaling: how models keep improving after training through autonomous interaction and shared experience.</span><span class="lang-zh lang-inline">部署后演化与经验扩展：模型如何通过自主交互与经验共享，在训练之后持续变强。</span></p>
   <h3><span class="lang-en lang-inline">Video Generation</span><span class="lang-zh lang-inline">视频生成</span></h3>
