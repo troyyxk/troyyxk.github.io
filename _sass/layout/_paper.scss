@@ -16,13 +16,23 @@
   border-bottom: 1px solid var(--rs-border);
 }
 
+/* The venue is a small black flag sitting above the title: white uppercase
+   text on a solid dark ground, so the venue/journal is the first thing the
+   eye lands on. The ground is black in both themes, which keeps the flag
+   legible on the light and the dark surface alike. A paper that is only on
+   arXiv reads "arXiv preprint" here; an accepted paper names its venue and
+   nothing else — no preprint id after it. */
 .paper-hero__venue {
-  margin: 0 0 0.45rem;
+  display: inline-block;
+  margin: 0 0 0.6rem;
+  padding: 0.32em 0.6em;
+  background: #000000;
+  border-radius: 2px;
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.07em;
   text-transform: uppercase;
-  color: var(--rs-accent);
+  color: #ffffff;
 }
 
 .paper-hero__title {
