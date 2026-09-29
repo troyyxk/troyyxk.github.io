@@ -205,6 +205,15 @@ html[data-theme="dark"] .lang-toggle__button.is-active {
   background: var(--rs-accent-soft);
 }
 
+/* The theme anchors the hamburger as a fixed 40px-tall box to the top of the
+   nav, so on narrow screens it hangs past the bottom edge of the masthead.
+   Centre it on the nav instead and cap its height. */
+.masthead__menu .greedy-nav button {
+  top: 50%;
+  height: 36px;
+  transform: translateY(-50%);
+}
+
 /* The site name is a wordmark, not a nav button: no pill, no underline, no
    border. It is also deliberately one step larger than the nav links. */
 .masthead__menu-item--lg {
