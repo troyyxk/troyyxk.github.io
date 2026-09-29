@@ -78,17 +78,17 @@ redirect_from:
 
 <ul class="news-list">
   <li>
-    <span class="news-list__date">2026.11</span>
-    <span class="news-list__text">
-      <span class="rs-tag"><span class="lang-en lang-inline">Project</span><span class="lang-zh lang-inline">项目</span></span>
-      <span class="lang-en lang-inline">Completed <strong>Ascend Supernode Cloud-based Multimodal Inference Acceleration Technology</strong> (HK$1.30M, Dec 2025 &ndash; Nov 2026) as Core Researcher.</span><span class="lang-zh lang-inline">作为核心研究员，完成<strong>昇腾超节点云端多模态推理加速技术</strong>项目（HK$1.30M，2025.12 – 2026.11）。</span>
-    </span>
-  </li>
-  <li>
     <span class="news-list__date">2026.09</span>
     <span class="news-list__text">
       <span class="rs-tag"><span class="lang-en lang-inline">Paper</span><span class="lang-zh lang-inline">论文</span></span>
       <span class="lang-en lang-inline"><a href="https://arxiv.org/abs/2601.19249">GLOVE: Global Verifier for LLM Memory-Environment Realignment</a> was accepted to <strong>NeurIPS 2026</strong>!</span><span class="lang-zh lang-inline">论文<a href="https://arxiv.org/abs/2601.19249">GLOVE: Global Verifier for LLM Memory-Environment Realignment</a>被 <strong>NeurIPS 2026</strong> 接收！</span>
+    </span>
+  </li>
+  <li>
+    <span class="news-list__date">2026.08</span>
+    <span class="news-list__text">
+      <span class="rs-tag"><span class="lang-en lang-inline">Project</span><span class="lang-zh lang-inline">项目</span></span>
+      <span class="lang-en lang-inline">Completed <strong>Ascend Supernode Cloud-based Multimodal Inference Acceleration Technology</strong> (HK$1.30M, Dec 2025 &ndash; Nov 2026) as Core Researcher.</span><span class="lang-zh lang-inline">作为核心研究员，完成<strong>昇腾超节点云端多模态推理加速技术</strong>项目（HK$1.30M，2025.12 – 2026.11）。</span>
     </span>
   </li>
   <li>
