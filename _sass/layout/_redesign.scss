@@ -793,12 +793,13 @@ html[data-theme="dark"] .pub-card {
   text-decoration: underline;
 }
 
-/* Optional one-line note directly under a card title. It is the one warm
-   colour on the page, which is the point: it flags news worth noticing (a
-   paper used in practice, an award) without competing with the accent blue
-   used by every link and button around it. Scoped through `.pub-card__content`
-   so it outranks that block's generic `p` colour and type size. */
-.pub-card__content .pub-note {
+/* Amber highlight chip: the "this work is being used in practice" line, under a
+   publication card title and in a paper page's hero. It is the one warm colour
+   on the site, which is the point. Both contexts are listed because each has a
+   generic paragraph rule to outrank — `.pub-card__content p` on a card, and
+   the theme's `.page__content p` on a paper page. */
+.pub-card__content .note-chip,
+.paper-hero .note-chip {
   display: inline-block;
   margin: 0 0 0.8rem;
   padding: 0.42rem 0.7rem;
@@ -810,7 +811,8 @@ html[data-theme="dark"] .pub-card {
   line-height: 1.45;
 }
 
-html[data-theme="dark"] .pub-card__content .pub-note {
+html[data-theme="dark"] .pub-card__content .note-chip,
+html[data-theme="dark"] .paper-hero .note-chip {
   background: rgba(255, 196, 61, 0.16);
   color: #f0c36a;
 }

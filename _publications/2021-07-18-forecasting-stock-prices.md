@@ -21,6 +21,7 @@ note_zh: '很高兴看到这项研究被多家量化机构实盘采用 :)'
   <p class="paper-hero__venue paper-hero__venue--accepted">IJCNN 2021 &middot; IEEE</p>
   <h1 class="paper-hero__title">Forecasting Stock Prices Using Stock Correlation Graph</h1>
   <p class="paper-hero__subtitle"><span class="lang-zh lang-block">基于股票相关性图的股价预测：一种图卷积网络方法</span>{{ page.title }}</p>
+  {% if page.note %}<p class="note-chip"><span class="lang-en lang-inline">{{ page.note }}</span><span class="lang-zh lang-inline">{{ page.note_zh | default: page.note }}</span></p>{% endif %}
   <p class="paper-hero__authors">Xingkun Yin, Da Yan, Abdullateef Almudaifer, Sibo Yan, Yang Zhou</p>
   <div class="paper-hero__actions">
     <a class="paper-btn paper-btn--primary" href="https://ieeexplore.ieee.org/document/9533510"><i class="fa-solid fa-file-lines" aria-hidden="true"></i><span class="lang-en lang-inline">Paper (IEEE)</span><span class="lang-zh lang-inline">论文全文（IEEE）</span></a>

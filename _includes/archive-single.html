@@ -77,7 +77,7 @@
       being used in practice, an award). `note_zh` falls back to `note`.
     {% endcomment %}
     {% if post.note %}
-      <p class="pub-note"><span class="lang-en lang-inline">{{ post.note }}</span><span class="lang-zh lang-inline">{{ post.note_zh | default: post.note }}</span></p>
+      <p class="note-chip"><span class="lang-en lang-inline">{{ post.note }}</span><span class="lang-zh lang-inline">{{ post.note_zh | default: post.note }}</span></p>
     {% endif %}
 
     {% if post.read_time %}
