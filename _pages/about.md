@@ -12,7 +12,7 @@ redirect_from:
 <div hidden data-page-title-en="Xingkun Yin | Academic Homepage" data-page-title-zh="尹星锟 | 学术主页"></div>
 
 <section class="hero">
-  <h1 class="hero__name"><span class="hero__name-en">Xingkun Yin</span><span class="hero__name-zh">尹星锟</span></h1>
+  <h1 class="hero__name"><span class="hero__name-en">Xingkun Yin</span><span class="hero__name-zh">尹星锟</span><span class="hero__name-role"><span class="lang-en lang-inline">Ph.D. candidate</span><span class="lang-zh lang-inline">博士生</span></span></h1>
   <ul class="hero__tags">
     <li><span class="lang-en lang-inline">LLM Memory</span><span class="lang-zh lang-inline">大模型记忆</span></li>
     <li><span class="lang-en lang-inline">Recursive Self-Improvement</span><span class="lang-zh lang-inline">递归自我改进</span></li>

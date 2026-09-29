@@ -485,6 +485,14 @@ img.author__avatar {
   color: var(--rs-muted);
 }
 
+/* Follows whichever name leads, so it always sits last in the group. */
+.hero__name-role {
+  order: 3;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--rs-muted);
+}
+
 /* In the Chinese view the Chinese name leads and the romanisation follows. */
 html[data-site-lang="zh"] .hero__name-en {
   order: 2;
@@ -887,6 +895,10 @@ html[data-theme="dark"] .pub-card__image {
 
   html[data-site-lang="zh"] .hero__name-zh {
     font-size: 1.5rem;
+  }
+
+  .hero__name-role {
+    font-size: 0.95rem;
   }
 
   .hero__tags li {
