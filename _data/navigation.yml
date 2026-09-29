@@ -12,9 +12,19 @@
 # used for both languages.
 
 main:
+  # Quick jumps to the sections of the homepage. The full publication list is
+  # still reachable from the hero card and the "All Publications" button.
+  - title: "About"
+    title_zh: "关于"
+    url: /#about-me
+
   - title: "Publications"
-    title_zh: "论文发表"
-    url: /publications/
+    title_zh: "论文"
+    url: /#publications
+
+  - title: "News"
+    title_zh: "新闻"
+    url: /#news
 
   # - title: "Talks"
   #   url: /talks/    

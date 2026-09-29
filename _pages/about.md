@@ -46,7 +46,7 @@ redirect_from:
 <p><u>非常欢迎合作。</u>如果上面的方向与你的研究有交集，欢迎随时联系我。</p>
 </div>
 
-<h2 id="-research"><span class="lang-en lang-inline">Research Interests</span><span class="lang-zh lang-inline">研究方向</span></h2>
+<h2 id="research"><span class="lang-en lang-inline">Research Interests</span><span class="lang-zh lang-inline">研究方向</span></h2>
 
 <div class="research-focus">
   <h3><span class="lang-en lang-inline">LLM Architecture</span><span class="lang-zh lang-inline">大模型架构</span></h3>
@@ -59,7 +59,7 @@ redirect_from:
   <p><span class="lang-en lang-inline">Cross-request reuse and compatibility-guided acceleration for text-to-video diffusion transformers.</span><span class="lang-zh lang-inline">文本到视频扩散 Transformer 的跨请求复用与兼容性引导加速。</span></p>
 </div>
 
-<h2 id="-publications"><span class="lang-en lang-inline">Selected Publications</span><span class="lang-zh lang-inline">代表性论文</span></h2>
+<h2 id="publications"><span class="lang-en lang-inline">Selected Publications</span><span class="lang-zh lang-inline">代表性论文</span></h2>
 
 {% assign selected = site.publications | reverse %}
 {% for post in selected limit:3 %}
@@ -74,7 +74,7 @@ redirect_from:
   <a class="hero__btn" href="{{ base_path }}/publications/"><i class="fas fa-arrow-right" aria-hidden="true"></i><span class="lang-en lang-inline">All Publications</span><span class="lang-zh lang-inline">全部论文</span></a>
 </div>
 
-<h2 id="-news"><span class="lang-en lang-inline">News</span><span class="lang-zh lang-inline">新闻动态</span></h2>
+<h2 id="news"><span class="lang-en lang-inline">News</span><span class="lang-zh lang-inline">新闻动态</span></h2>
 
 <ul class="news-list">
   <li>
@@ -107,7 +107,7 @@ redirect_from:
   </li>
 </ul>
 
-<h2 id="-contact"><span class="lang-en lang-inline">Contact</span><span class="lang-zh lang-inline">联系方式</span></h2>
+<h2 id="contact"><span class="lang-en lang-inline">Contact</span><span class="lang-zh lang-inline">联系方式</span></h2>
 
 <div class="about-summary lang-en lang-block">
 <p>Email: <a href="mailto:yinxingkun@connect.hku.hk">yinxingkun [at] connect [dot] hku [dot] hk</a><br />

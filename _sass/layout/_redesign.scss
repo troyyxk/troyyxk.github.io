@@ -420,6 +420,15 @@ img.author__avatar {
   margin: 2.2rem 0;
 }
 
+/* The nav links jump to sections of this page. The masthead is fixed, so the
+   headings below carry their own offset; smooth scrolling makes the jump
+   readable rather than an instant teleport. */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 .page__content h1,
 .page__content h2,
 .page__content h3,
