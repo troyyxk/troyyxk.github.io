@@ -965,7 +965,89 @@ figure.highlight.has-code-copy:before {
 }
 
 /* ==========================================================================
-   12. Responsive
+   12. Previous / next navigation
+   --------------------------------------------------------------------------
+   The theme glues two grey 50% boxes together and keeps the destination in a
+   tooltip, which reads as a disabled control rather than as a link. Here each
+   side is its own card: direction with an arrow, then the title of the page it
+   leads to. A lone card stretches to the full width.
+   ========================================================================== */
+
+.pagination {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.9rem;
+}
+
+/* The theme's clearfix would otherwise add two empty grid items. */
+.pagination:before,
+.pagination:after {
+  content: none;
+  display: none;
+}
+
+.pagination--pager {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  float: none;
+  width: auto;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--rs-border);
+  border-radius: var(--rs-radius-sm);
+  background: var(--rs-card);
+  color: var(--rs-body);
+  /* The theme centres the pager text; the cards read left-to-right. */
+  text-align: left;
+  text-decoration: none;
+  transition: border-color 0.18s ease, background 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+/* The theme squares off the inner corners so the pair looks welded together;
+   the cards are separate now, so every corner stays round. */
+.pagination--pager:first-child,
+.pagination--pager:last-child {
+  margin-left: 0;
+  border-radius: var(--rs-radius-sm);
+}
+
+.pagination--pager:hover,
+.pagination--pager:focus {
+  border-color: var(--rs-accent-line);
+  background: var(--rs-surface);
+  box-shadow: var(--rs-shadow-sm);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.pagination--pager--next {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.pagination__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--rs-accent);
+}
+
+.pagination__title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--rs-heading);
+}
+
+/* ==========================================================================
+   13. Responsive
    ========================================================================== */
 
 @media (max-width: 37.5em) {

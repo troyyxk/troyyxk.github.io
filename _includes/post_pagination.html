@@ -1,16 +1,25 @@
 {% include base_path %}
 
+{% comment %}
+  Previous / next navigation. Each side is a card: the direction, then the
+  title of the page it leads to, so it reads as a link rather than as a grey
+  label (the title used to live in a tooltip). A side with no neighbour is not
+  rendered at all, instead of leaving a dead box behind. Styles live in
+  _sass/layout/_redesign.scss.
+{% endcomment %}
 {% if page.previous or page.next %}
   <nav class="pagination">
     {% if page.previous %}
-      <a href="{{ base_path }}{{ page.previous.url }}" class="pagination--pager" title="{{ page.previous.title | markdownify | strip_html }}">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</a>
-    {% else %}
-      <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</a>
+      <a href="{{ base_path }}{{ page.previous.url }}" class="pagination--pager pagination--pager--prev">
+        <span class="pagination__label"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i><span class="lang-en lang-inline">Previous</span><span class="lang-zh lang-inline">上一篇</span></span>
+        <span class="pagination__title">{{ page.previous.title | markdownify | strip_html | strip }}</span>
+      </a>
     {% endif %}
     {% if page.next %}
-      <a href="{{ base_path }}{{ page.next.url }}" class="pagination--pager" title="{{ page.next.title | markdownify | strip_html }}">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}</a>
-    {% else %}
-      <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}</a>
+      <a href="{{ base_path }}{{ page.next.url }}" class="pagination--pager pagination--pager--next">
+        <span class="pagination__label"><span class="lang-en lang-inline">Next</span><span class="lang-zh lang-inline">下一篇</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+        <span class="pagination__title">{{ page.next.title | markdownify | strip_html | strip }}</span>
+      </a>
     {% endif %}
   </nav>
 {% endif %}
