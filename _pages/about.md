@@ -13,19 +13,23 @@ redirect_from:
 
 <section class="hero">
   <h1 class="hero__name">Xingkun Yin<span class="hero__name-zh">尹星锟</span></h1>
-  <p class="hero__role">
-    <span class="lang-en lang-inline">Second-year Ph.D. Student, NICE Lab &middot; Department of Electrical and Computer Engineering, The University of Hong Kong</span>
-    <span class="lang-zh lang-inline">香港大学 电机与计算机工程系 NICE Lab 博士研究生（二年级）</span>
+  <p class="hero__pitch">
+    <span class="lang-en lang-inline">Making large models cheaper to run, without giving up what makes them useful.</span>
+    <span class="lang-zh lang-inline">在不让模型失去价值的前提下，让大模型跑得更便宜。</span>
   </p>
+  <ul class="hero__tags">
+    <li><span class="lang-en lang-inline">LLM Architecture</span><span class="lang-zh lang-inline">大模型架构</span></li>
+    <li><span class="lang-en lang-inline">LLM Memory</span><span class="lang-zh lang-inline">大模型记忆</span></li>
+    <li><span class="lang-en lang-inline">Experience Scaling</span><span class="lang-zh lang-inline">经验扩展</span></li>
+    <li><span class="lang-en lang-inline">Video Generation</span><span class="lang-zh lang-inline">视频生成</span></li>
+  </ul>
   <p class="hero__meta">
-    <span class="lang-en lang-inline">Advised by Prof. <a href="https://hongyangdu.github.io/">Hongyang Du</a> &middot; Hong Kong SAR</span>
-    <span class="lang-zh lang-inline">导师：<a href="https://hongyangdu.github.io/">Hongyang Du</a> 教授 &middot; 中国香港</span>
+    <span class="lang-en lang-inline">Advised by Prof. <a href="https://hongyangdu.github.io/">Hongyang Du</a> &middot; HKU ECE</span>
+    <span class="lang-zh lang-inline">导师：<a href="https://hongyangdu.github.io/">Hongyang Du</a> 教授 &middot; HKU ECE</span>
   </p>
   <div class="hero__actions">
-    <a class="hero__btn hero__btn--primary" href="mailto:yinxingkun@connect.hku.hk"><i class="fas fa-envelope" aria-hidden="true"></i>Email</a>
+    <a class="hero__btn hero__btn--primary" href="{{ base_path }}/publications/"><i class="fas fa-book-open" aria-hidden="true"></i><span class="lang-en lang-inline">Publications</span><span class="lang-zh lang-inline">论文发表</span></a>
     <a class="hero__btn" href="https://scholar.google.com/citations?user=iZxgsMUAAAAJ&amp;hl=zh-TW&amp;oi=sra"><i class="ai ai-google-scholar" aria-hidden="true"></i>Google Scholar</a>
-    <a class="hero__btn" href="https://github.com/troyyxk"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a>
-    <a class="hero__btn" href="{{ base_path }}/publications/"><i class="fas fa-book-open" aria-hidden="true"></i><span class="lang-en lang-inline">Publications</span><span class="lang-zh lang-inline">论文发表</span></a>
   </div>
 </section>
 
