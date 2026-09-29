@@ -26,6 +26,7 @@ redirect_from:
   <div class="hero__actions">
     <a class="hero__btn hero__btn--primary" href="{{ base_path }}/publications/"><i class="fas fa-book-open" aria-hidden="true"></i><span class="lang-en lang-inline">Publications</span><span class="lang-zh lang-inline">论文发表</span></a>
     <a class="hero__btn" href="https://scholar.google.com/citations?user=iZxgsMUAAAAJ&amp;hl=zh-TW&amp;oi=sra"><i class="ai ai-google-scholar" aria-hidden="true"></i>Google Scholar</a>
+    <a class="hero__btn" href="https://github.com/troyyxk"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a>
   </div>
 </section>
 
