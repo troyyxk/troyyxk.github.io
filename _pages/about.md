@@ -21,7 +21,7 @@ redirect_from:
   </ul>
   <p class="hero__meta">
     <span class="lang-en lang-inline">Advised by Prof. <a href="https://hongyangdu.github.io/">Hongyang Du</a> &middot; HKU ECE</span>
-    <span class="lang-zh lang-inline">导师：<a href="https://hongyangdu.github.io/">Hongyang Du</a> 教授 &middot; HKU ECE</span>
+    <span class="lang-zh lang-inline">导师：<a href="https://hongyangdu.github.io/">杜泓阳</a>教授 &middot; HKU ECE</span>
   </p>
   <div class="hero__actions">
     <a class="hero__btn hero__btn--primary" href="{{ base_path }}/publications/"><i class="fas fa-book-open" aria-hidden="true"></i><span class="lang-en lang-inline">Publications</span><span class="lang-zh lang-inline">论文发表</span></a>
@@ -40,7 +40,7 @@ redirect_from:
 </div>
 
 <div class="about-summary lang-zh lang-block">
-<p>我是香港大学电机与计算机工程系 <a href="https://hongyangdu.github.io/nice/">NICE Lab</a> 的二年级博士研究生，很荣幸由 <a href="https://hongyangdu.github.io/">Hongyang Du</a> 教授指导。</p>
+<p>我是香港大学电机与计算机工程系 <a href="https://hongyangdu.github.io/nice/">NICE Lab</a> 的二年级博士研究生，很荣幸由 <a href="https://hongyangdu.github.io/">杜泓阳</a>教授指导。</p>
 <p>目前的研究兴趣包括<strong>大模型架构</strong>、<strong>大模型记忆</strong>、<strong>经验驱动的模型演化</strong>与<strong>视频生成</strong>。我关注系统效率与模型能力之间的交叉问题：在不让模型失去价值的前提下，让大模型跑得更便宜。</p>
 <p>最让我兴奋的，是让模型像人脑一样持续进化、自己思考 —— 在训练结束之后依然能从经验中不断学习，而不是在部署的那一刻就定型。</p>
 <p><u>非常欢迎合作。</u>如果上面的方向与你的研究有交集，欢迎随时联系我。</p>
