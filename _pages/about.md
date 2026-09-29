@@ -13,10 +13,6 @@ redirect_from:
 
 <section class="hero">
   <h1 class="hero__name">Xingkun Yin<span class="hero__name-zh">尹星锟</span></h1>
-  <p class="hero__pitch">
-    <span class="lang-en lang-inline">Making large models cheaper to run, without giving up what makes them useful.</span>
-    <span class="lang-zh lang-inline">在不让模型失去价值的前提下，让大模型跑得更便宜。</span>
-  </p>
   <ul class="hero__tags">
     <li><span class="lang-en lang-inline">LLM Architecture</span><span class="lang-zh lang-inline">大模型架构</span></li>
     <li><span class="lang-en lang-inline">LLM Memory</span><span class="lang-zh lang-inline">大模型记忆</span></li>

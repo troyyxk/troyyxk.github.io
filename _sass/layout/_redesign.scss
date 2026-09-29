@@ -398,14 +398,6 @@ html[data-theme="dark"] .lang-toggle__button.is-active {
   margin-left: 0.35rem;
 }
 
-.hero__pitch {
-  margin: 0.7rem 0 0;
-  font-size: 1.02rem;
-  font-weight: 600;
-  line-height: 1.55;
-  color: var(--rs-accent);
-}
-
 /* Research keywords. The card carries what the person works on; the sidebar
    carries who they are, so the two never repeat each other. */
 .hero__tags {
@@ -754,10 +746,6 @@ html[data-theme="dark"] .pub-card__image {
     display: block;
     margin: 0.15rem 0 0;
     font-size: 1.2rem;
-  }
-
-  .hero__pitch {
-    font-size: 0.95rem;
   }
 
   .hero__tags li {
