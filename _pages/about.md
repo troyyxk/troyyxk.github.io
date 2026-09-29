@@ -81,20 +81,6 @@ redirect_from:
   <a class="hero__btn" href="{{ base_path }}/publications/"><i class="fas fa-arrow-right" aria-hidden="true"></i><span class="lang-en lang-inline">All Publications</span><span class="lang-zh lang-inline">全部论文</span></a>
 </div>
 
-<h2 id="-contact"><span class="lang-en lang-inline">Contact</span><span class="lang-zh lang-inline">联系方式</span></h2>
-
-<div class="about-summary lang-en lang-block">
-<p>Email: <a href="mailto:yinxingkun@connect.hku.hk">yinxingkun [at] connect [dot] hku [dot] hk</a><br />
-Address: Department of Electrical and Computer Engineering, The University of Hong Kong, Pokfulam, Hong Kong SAR</p>
-<p>As always, GLHF! <em>(Good luck, have fun!)</em></p>
-</div>
-
-<div class="about-summary lang-zh lang-block">
-<p>邮箱：<a href="mailto:yinxingkun@connect.hku.hk">yinxingkun [at] connect [dot] hku [dot] hk</a><br />
-地址：香港特别行政区 薄扶林 香港大学 电机与计算机工程系</p>
-<p>As always, GLHF! <em>（Good luck, have fun!）</em></p>
-</div>
-
 <h2 id="-news"><span class="lang-en lang-inline">News</span><span class="lang-zh lang-inline">新闻动态</span></h2>
 
 <ul class="news-list">
@@ -120,3 +106,17 @@ Address: Department of Electrical and Computer Engineering, The University of Ho
     </span>
   </li>
 </ul>
+
+<h2 id="-contact"><span class="lang-en lang-inline">Contact</span><span class="lang-zh lang-inline">联系方式</span></h2>
+
+<div class="about-summary lang-en lang-block">
+<p>Email: <a href="mailto:yinxingkun@connect.hku.hk">yinxingkun [at] connect [dot] hku [dot] hk</a><br />
+Address: Department of Electrical and Computer Engineering, The University of Hong Kong, Pokfulam, Hong Kong SAR</p>
+<p>As always, GLHF! <em>(Good luck, have fun!)</em></p>
+</div>
+
+<div class="about-summary lang-zh lang-block">
+<p>邮箱：<a href="mailto:yinxingkun@connect.hku.hk">yinxingkun [at] connect [dot] hku [dot] hk</a><br />
+地址：香港特别行政区 薄扶林 香港大学 电机与计算机工程系</p>
+<p>As always, GLHF! <em>（Good luck, have fun!）</em></p>
+</div>
