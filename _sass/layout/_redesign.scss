@@ -288,6 +288,49 @@ html[data-theme="dark"] .lang-toggle__button.is-active {
   color: var(--rs-accent);
 }
 
+/* WeChat row: the QR panel needs to wrap, unlike the nowrap link rows. */
+.sidebar .author__wechat {
+  white-space: normal;
+}
+
+.author__wechat-toggle {
+  cursor: pointer;
+}
+
+.author__wechat-panel {
+  width: 100%;
+  min-width: 150px;
+  max-width: 200px;
+  margin: 0.5rem 0 0.75rem;
+  padding: 0.6rem;
+  border: 1px solid var(--rs-accent-line);
+  border-radius: var(--rs-radius-sm);
+  /* Always white, in both themes: a QR code needs a light quiet zone, and a
+     dark panel would make it unreliable to scan. */
+  background: #ffffff;
+  box-shadow: var(--rs-shadow-sm);
+  text-align: center;
+}
+
+.author__wechat-panel[hidden] {
+  display: none;
+}
+
+.author__wechat-panel img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.author__wechat-caption {
+  margin-top: 0.45rem;
+  color: #64748b;
+  font-size: 0.6875em;
+  line-height: 1.4;
+  white-space: normal;
+}
+
 @media (min-width: 57.8125em) {
   .profile_box {
     display: block;

@@ -37,6 +37,7 @@ author:
   employer_zh      : "香港大学"
   uri              : # URL
   email            : "yinxingkun@connect.hku.hk" 
+  wechat           : "wechat-qr.jpg"   # QR image inside /images/. Leave blank to hide the WeChat entry.
 
   # Academic websites
   academia         : # URL
