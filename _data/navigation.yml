@@ -12,8 +12,8 @@
 # used for both languages.
 
 main:
-  # About / News / Contact jump to sections of the homepage; Publications goes
-  # to the full publication list page.
+  # About / News / Service / Contact jump to sections of the homepage;
+  # Publications goes to the full publication list page.
   - title: "About"
     title_zh: "关于"
     url: /#about-me
@@ -25,6 +25,10 @@ main:
   - title: "News"
     title_zh: "新闻"
     url: /#news
+
+  - title: "Academic Service"
+    title_zh: "学术服务"
+    url: /#service
 
   - title: "Contact"
     title_zh: "联系"
