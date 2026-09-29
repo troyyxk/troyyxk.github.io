@@ -1,12 +1,20 @@
 ---
 layout: archive
 title: "Publications"
+title_zh: "论文发表"
 permalink: /publications/
 author_profile: true
 ---
 
+<div hidden
+     data-page-title-en="{{ page.title }} {{ site.title_separator }} {{ site.title }}"
+     data-page-title-zh="{{ page.title_zh }} {{ site.title_separator }} {{ site.title_zh | default: site.title }}"></div>
+
 {% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+  <div class="wordwrap">
+    <span class="lang-en lang-block">You can also find my articles on <a href="{{ site.author.googlescholar }}">my Google Scholar profile</a>.</span>
+    <span class="lang-zh lang-block">你也可以在<a href="{{ site.author.googlescholar }}">我的 Google Scholar 主页</a>查看全部文章。</span>
+  </div>
 {% endif %}
 
 {% include base_path %}
