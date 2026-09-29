@@ -14,9 +14,9 @@ redirect_from:
 <section class="hero">
   <h1 class="hero__name">Xingkun Yin<span class="hero__name-zh">尹星锟</span></h1>
   <ul class="hero__tags">
-    <li><span class="lang-en lang-inline">LLM Architecture</span><span class="lang-zh lang-inline">大模型架构</span></li>
     <li><span class="lang-en lang-inline">LLM Memory</span><span class="lang-zh lang-inline">大模型记忆</span></li>
-    <li><span class="lang-en lang-inline">Experience Scaling</span><span class="lang-zh lang-inline">经验扩展</span></li>
+    <li><span class="lang-en lang-inline">Recursive Self-Improvement</span><span class="lang-zh lang-inline">递归自我改进</span></li>
+    <li><span class="lang-en lang-inline">LLM Architecture</span><span class="lang-zh lang-inline">大模型架构</span></li>
     <li><span class="lang-en lang-inline">Video Generation</span><span class="lang-zh lang-inline">视频生成</span></li>
   </ul>
   <p class="hero__meta">
