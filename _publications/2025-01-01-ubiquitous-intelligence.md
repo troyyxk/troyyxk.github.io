@@ -1,6 +1,5 @@
 ---
 title: "Ubiquitous Intelligence Via Wireless Network-Driven LLMs Evolution"
-title_zh: "泛在智能：基于无线网络驱动的大模型演化"
 collection: publications
 badge: 'npj Wireless Technology|2025'
 # category: manuscripts

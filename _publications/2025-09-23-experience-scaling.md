@@ -1,6 +1,5 @@
 ---
 title: "Experience Scaling: Post-Deployment Evolution For Large Language Models"
-title_zh: "Experience Scaling：大模型的部署后演化"
 collection: publications
 badge: 'arXiv|2025'
 permalink: /publication/2025-09-23-experience-scaling

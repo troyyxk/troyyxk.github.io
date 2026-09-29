@@ -13,14 +13,10 @@
 {% endif %}
 
 {% comment %}
-  Cards are bilingual: `title_zh` / `description_zh` hold the Chinese copy and
-  fall back to the English text, so content without a translation simply renders
-  its English version in both languages.
+  A card keeps its title in the original language — the English title is the
+  one people cite and search for — while the summary is bilingual: `description_zh`
+  holds the Chinese copy and falls back to the English text.
 {% endcomment %}
-{% assign title_zh = post.title_zh %}
-{% if title_zh == nil or title_zh == '' %}
-  {% assign title_zh = title %}
-{% endif %}
 
 <div class="{{ include.type | default: "list" }}__item{% if post.collection == 'publications' %} pub-card{% endif %}">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
@@ -69,9 +65,9 @@
       {% endif %}
       <span itemprop="headline">
       {% if post.link %}
-        <a href="{{ post.link }}"><span class="lang-en lang-inline">{{ title }}</span><span class="lang-zh lang-inline">{{ title_zh }}</span></a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       {% else %}
-        <a href="{{ base_path }}{{ post.url }}" rel="permalink"><span class="lang-en lang-inline">{{ title }}</span><span class="lang-zh lang-inline">{{ title_zh }}</span></a>
+        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
       {% endif %}
       </span>
     </h2>
