@@ -9,10 +9,11 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "Yin's Page"
+title                    : "Xingkun Yin"          # Shown in the masthead (English)
+title_zh                 : "尹星锟"                # Shown in the masthead when 中文 is selected
 title_separator          : "-"
-name                     : &name "Your Name"
-description              : &description "Your Name's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
+name                     : &name "Xingkun Yin"    # Shown in the footer copyright line
+description              : &description "Xingkun Yin is a first-year Ph.D. student at NICE Lab, The University of Hong Kong, working on LLM architecture, LLM memory, experience scaling and video generation."
 url                      : https://troyyxk.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -21,14 +22,19 @@ repository               : "troyyxk/troyyxk.github.io"
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
+#               Fields ending in `_zh` are optional: they are shown when the reader
+#               selects 中文 in the homepage language switcher.
 author:
   # Biographic information
   avatar           : "xingkun.jpg"
   name             : "Xingkun YIN"
   pronouns         : # example: "she/her"  
-  bio              : "PhD Student At the University of Hong Kong"
+  bio              : "First-year Ph.D. student at NICE Lab, HKU EEE"
+  bio_zh           : "香港大学 电机电子工程系 NICE Lab 博士研究生"
   location         : "Hong Kong SAR"
+  location_zh      : "中国香港"
   employer         : "University of Hong Kong"
+  employer_zh      : "香港大学"
   uri              : # URL
   email            : "yinxingkun@connect.hku.hk" 
 
@@ -51,7 +57,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "https://github.com/troyyxk"
+  github           : "troyyxk"          # username only - the template adds https://github.com/
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 

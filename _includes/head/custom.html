@@ -15,3 +15,21 @@
 <meta name="theme-color" content="#ffffff"/>
 
 <!-- end custom head snippets -->
+
+<!-- Language: set data-site-lang before first paint so the stored choice
+     (EN / 中文) renders without a flash of the wrong language. -->
+<script>
+  (function () {
+    var lang = 'en';
+    try {
+      if (window.localStorage.getItem('site-lang') === 'zh') {
+        lang = 'zh';
+      }
+    } catch (error) {
+      /* storage unavailable - fall back to English */
+    }
+    document.documentElement.setAttribute('data-site-lang', lang);
+    document.documentElement.setAttribute('lang', lang === 'zh' ? 'zh-Hans' : 'en');
+  })();
+</script>
+<script defer src="{{ base_path }}/assets/js/site-lang.js"></script>

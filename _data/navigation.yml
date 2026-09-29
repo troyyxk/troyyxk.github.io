@@ -6,9 +6,14 @@
 #
 # NOTE that only one of the CV options should be selected, the first is for the
 #      Markdown formatted page while the second is generated using JSON.
+#
+# Each entry may also carry a `title_zh`, which is shown when the reader picks
+# 中文 in the language switcher on the homepage. If it is missing, `title` is
+# used for both languages.
 
 main:
   - title: "Publications"
+    title_zh: "论文发表"
     url: /publications/
 
   # - title: "Talks"

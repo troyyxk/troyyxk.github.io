@@ -1,0 +1,680 @@
+/* ==========================================================================
+   SITE REDESIGN
+   A blue-accent, card-based academic layout inspired by modern single-page
+   academic homepages. Everything here is additive: it only overrides the
+   theme through CSS custom properties and more specific selectors, so the
+   rest of the template keeps working untouched.
+   ========================================================================== */
+
+/* ==========================================================================
+   1. Design tokens
+   ========================================================================== */
+
+:root {
+  --rs-accent: #00369f;
+  --rs-accent-hover: #00286f;
+  --rs-accent-soft: rgba(0, 54, 159, 0.08);
+  --rs-accent-line: rgba(0, 54, 159, 0.18);
+  --rs-heading: #0f2544;
+  --rs-body: #334155;
+  --rs-muted: #64748b;
+  --rs-surface: #f8fafc;
+  --rs-card: #ffffff;
+  --rs-border: rgba(15, 23, 42, 0.10);
+  --rs-shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.06);
+  --rs-shadow: 0 14px 30px rgba(15, 23, 42, 0.10);
+  --rs-radius: 14px;
+  --rs-radius-sm: 9px;
+}
+
+html[data-theme="dark"] {
+  --rs-accent: #86adff;
+  --rs-accent-hover: #b0c9ff;
+  --rs-accent-soft: rgba(134, 173, 255, 0.14);
+  --rs-accent-line: rgba(134, 173, 255, 0.30);
+  --rs-heading: #eaf1ff;
+  --rs-body: #cbd5e1;
+  --rs-muted: #9aa8bb;
+  --rs-surface: #33353a;
+  --rs-card: #3d3f45;
+  --rs-border: rgba(255, 255, 255, 0.14);
+  --rs-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.32);
+  --rs-shadow: 0 14px 30px rgba(0, 0, 0, 0.44);
+}
+
+/* Theme colour overrides (win over the theme files because they are imported
+   after them, and match their selector specificity). */
+:root {
+  --global-base-color: #00369f;
+  --global-link-color: #1d4ed8;
+  --global-link-color-hover: #00369f;
+  --global-link-color-visited: #5b4bb8;
+  --global-text-color: #334155;
+  --global-masthead-link-color: #1e293b;
+  --global-masthead-link-color-hover: #00369f;
+}
+
+html[data-theme="dark"] {
+  --global-base-color: #86adff;
+  --global-link-color: #8fb6ff;
+  --global-link-color-hover: #c2d6ff;
+  --global-link-color-visited: #b6adf5;
+  --global-text-color: #cbd5e1;
+  --global-masthead-link-color: #e2e8f0;
+  --global-masthead-link-color-hover: #ffffff;
+}
+
+/* ==========================================================================
+   2. Language switching (shown / hidden via html[data-site-lang])
+   ========================================================================== */
+
+.lang-block,
+.lang-inline {
+  display: none;
+}
+
+html:not([data-site-lang]) .lang-en.lang-block,
+html[data-site-lang="en"] .lang-en.lang-block {
+  display: block;
+}
+
+html:not([data-site-lang]) .lang-en.lang-inline,
+html[data-site-lang="en"] .lang-en.lang-inline {
+  display: inline;
+}
+
+html[data-site-lang="zh"] .lang-zh.lang-block {
+  display: block;
+}
+
+html[data-site-lang="zh"] .lang-zh.lang-inline {
+  display: inline;
+}
+
+.lang-switcher {
+  position: sticky;
+  top: 5.25rem;
+  z-index: 15;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-bottom: 1.6rem;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid var(--rs-accent-line);
+  border-radius: 999px;
+  background: var(--rs-card);
+  box-shadow: var(--rs-shadow-sm);
+}
+
+.lang-switcher__label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--rs-accent);
+}
+
+.lang-switcher__buttons {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.22rem;
+  border-radius: 999px;
+  background: var(--rs-accent-soft);
+}
+
+.lang-switcher__button {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.4rem 0.95rem;
+  background: transparent;
+  color: var(--rs-muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lang-switcher__button:hover {
+  color: var(--rs-accent);
+}
+
+.lang-switcher__button.is-active {
+  background: var(--rs-accent);
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(0, 54, 159, 0.24);
+}
+
+html[data-theme="dark"] .lang-switcher__button.is-active {
+  color: #10151f;
+}
+
+/* ==========================================================================
+   3. Masthead / navigation
+   ========================================================================== */
+
+.masthead {
+  box-shadow: 0 1px 0 var(--rs-border), 0 8px 24px rgba(15, 23, 42, 0.05);
+}
+
+.masthead__inner-wrap {
+  padding: 0.6em 1.25em;
+}
+
+.masthead__menu-item a {
+  border-radius: 999px;
+  padding: 0.3em 0.7em;
+  font-weight: 600;
+  letter-spacing: 0.005em;
+  color: var(--rs-muted);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.masthead__menu-item a:hover {
+  background: var(--rs-accent-soft);
+  color: var(--rs-accent);
+}
+
+.masthead__menu-item.selected a {
+  color: var(--rs-accent);
+  background: var(--rs-accent-soft);
+}
+
+.masthead__menu-item--lg a {
+  font-size: 1.02rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--rs-heading);
+}
+
+.masthead__menu-item--lg a:hover {
+  background: transparent;
+  color: var(--rs-accent);
+}
+
+/* ==========================================================================
+   4. Sidebar profile
+   ========================================================================== */
+
+.profile_box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.author__avatar img {
+  border-radius: 50%;
+  border: 1px solid var(--rs-border);
+  padding: 4px;
+  background: var(--rs-card);
+  box-shadow: var(--rs-shadow-sm);
+}
+
+.author__name {
+  font-size: 1.12em;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--rs-heading);
+}
+
+.author__bio {
+  margin-top: 0.25em;
+  font-size: 0.78em;
+  line-height: 1.5;
+  color: var(--rs-muted);
+}
+
+.author__urls-wrapper .btn {
+  border-radius: 999px;
+}
+
+.author__urls a {
+  color: var(--rs-body);
+  transition: color 0.2s ease;
+}
+
+.author__urls a:hover {
+  color: var(--rs-accent);
+}
+
+.author__urls li {
+  color: var(--rs-muted);
+}
+
+.author__urls li i,
+.author__urls_sm a i {
+  color: var(--rs-accent);
+}
+
+@media (min-width: 57.8125em) {
+  .profile_box {
+    display: block;
+  }
+}
+
+/* ==========================================================================
+   5. Page shell & typography
+   ========================================================================== */
+
+.page__content {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--rs-body);
+}
+
+.page__content h1,
+.page__content h2,
+.page__content h3,
+.page__content h4 {
+  color: var(--rs-heading);
+  font-weight: 700;
+  letter-spacing: -0.012em;
+}
+
+.page__content > h1,
+.page__content > h2 {
+  margin-top: 2.4rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--rs-accent-line);
+}
+
+.page__content > h1:first-child,
+.page__content > h2:first-child {
+  margin-top: 0.4rem;
+}
+
+.page__content > h3 {
+  margin-top: 1.8rem;
+}
+
+.page__content a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.page__content hr {
+  border: 0;
+  border-top: 1px solid var(--rs-border);
+  margin: 2.2rem 0;
+}
+
+.page__content h1,
+.page__content h2,
+.page__content h3,
+.page__content h4,
+.page__content h5,
+.page__content h6 {
+  scroll-margin-top: 5.5rem;
+}
+
+.page__title {
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--rs-heading);
+}
+
+.page__inner-wrap {
+  padding-bottom: 1rem;
+}
+
+/* The homepage renders its own `.hero` heading, so the generic page title
+   would be a duplicate. Only pages that actually contain a hero are affected. */
+.page__inner-wrap:has(.hero) > header {
+  display: none;
+}
+
+/* ==========================================================================
+   6. Hero block (homepage)
+   ========================================================================== */
+
+.hero {
+  padding: 1.5rem 1.6rem;
+  margin: 0 0 2rem;
+  border: 1px solid var(--rs-accent-line);
+  border-radius: var(--rs-radius);
+  background: var(--rs-card);
+  background-image: linear-gradient(135deg, var(--rs-accent-soft) 0%, rgba(255, 255, 255, 0) 55%);
+  box-shadow: var(--rs-shadow-sm);
+}
+
+.hero__name {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 1.85rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  color: var(--rs-heading);
+}
+
+.hero__name-zh {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--rs-muted);
+  margin-left: 0.35rem;
+}
+
+.hero__role {
+  margin: 0.7rem 0 0;
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1.6;
+  color: var(--rs-accent);
+}
+
+.hero__meta {
+  margin: 0.3rem 0 0;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--rs-muted);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 1.15rem;
+}
+
+.hero__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.95rem;
+  border: 1px solid var(--rs-accent-line);
+  border-radius: 999px;
+  background: var(--rs-card);
+  color: var(--rs-accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.hero__btn:hover {
+  transform: translateY(-2px);
+  background: var(--rs-accent-soft);
+  box-shadow: var(--rs-shadow-sm);
+}
+
+.hero__btn--primary {
+  border-color: transparent;
+  background: var(--rs-accent);
+  color: #ffffff;
+}
+
+.hero__btn--primary:hover {
+  background: var(--rs-accent-hover);
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .hero__btn--primary:hover {
+  color: #10151f;
+}
+
+/* ==========================================================================
+   7. News list
+   ========================================================================== */
+
+.news-list {
+  margin: 0.4rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.news-list li {
+  display: flex;
+  gap: 0.85rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px dashed var(--rs-border);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.news-list li:last-child {
+  border-bottom: 0;
+}
+
+.news-list .news-list__date {
+  flex: 0 0 4.8rem;
+  padding-top: 0.1rem;
+  color: var(--rs-accent);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.01em;
+}
+
+.rs-tag {
+  display: inline-block;
+  margin-left: 0.35rem;
+  padding: 0.1rem 0.5rem;
+  border: 1px solid var(--rs-accent-line);
+  border-radius: 999px;
+  background: var(--rs-accent-soft);
+  color: var(--rs-accent);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  vertical-align: 1px;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   8. Research focus grid
+   ========================================================================== */
+
+.research-focus-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin: 1.1rem 0 1.6rem;
+}
+
+.research-focus-item {
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--rs-border);
+  border-left: 3px solid var(--rs-accent);
+  border-radius: 0 var(--rs-radius-sm) var(--rs-radius-sm) 0;
+  background: var(--rs-surface);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.research-focus-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--rs-shadow-sm);
+}
+
+.research-focus-item h3 {
+  margin: 0 0 0.4rem;
+  padding: 0;
+  border: 0;
+  color: var(--rs-accent);
+  font-size: 0.98rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.research-focus-item p {
+  margin: 0;
+  color: var(--rs-body);
+  font-size: 0.89rem;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   9. Publication cards
+   ========================================================================== */
+
+.pub-card {
+  padding: 1.3rem 1.4rem;
+  margin-bottom: 1.3rem;
+  border: 1px solid var(--rs-border);
+  border-radius: var(--rs-radius);
+  background: var(--rs-card);
+  box-shadow: var(--rs-shadow-sm);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.pub-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--rs-accent-line);
+  box-shadow: var(--rs-shadow);
+}
+
+html[data-theme="dark"] .pub-card {
+  background: var(--rs-card);
+  border-color: var(--rs-border);
+}
+
+.pub-card .archive__item-title {
+  margin: 0 0 0.55rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+}
+
+.pub-card .archive__item-title a {
+  color: var(--rs-heading);
+  text-decoration: none;
+}
+
+.pub-card .archive__item-title a:hover {
+  color: var(--rs-accent);
+  text-decoration: underline;
+}
+
+.pub-card__layout {
+  gap: 1.4rem;
+}
+
+.pub-card__image {
+  flex: 0 0 265px;
+  max-width: 265px;
+  border: 1px solid var(--rs-border);
+  border-radius: var(--rs-radius-sm);
+  background: var(--rs-surface);
+  box-shadow: none;
+}
+
+html[data-theme="dark"] .pub-card__image {
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.pub-card__content p {
+  color: var(--rs-body);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.pub-card__content p:last-child {
+  margin-bottom: 0;
+}
+
+.pub-card__content a {
+  font-weight: 600;
+}
+
+.pub-card .page__meta,
+.pub-card .page__date {
+  color: var(--rs-muted);
+  font-size: 0.82rem;
+}
+
+/* "See all" call to action used on the homepage */
+.rs-more {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.4rem;
+  padding: 0.9rem 1.1rem;
+  border: 1px dashed var(--rs-accent-line);
+  border-radius: var(--rs-radius);
+  background: var(--rs-surface);
+}
+
+.rs-more p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--rs-muted);
+}
+
+.rs-more .hero__btn {
+  background: var(--rs-card);
+}
+
+/* ==========================================================================
+   10. Footer
+   ========================================================================== */
+
+.page__footer {
+  border-top: 1px solid var(--rs-border);
+  margin-top: 2rem;
+}
+
+.page__footer footer {
+  font-size: 0.82rem;
+  color: var(--rs-muted);
+}
+
+.page__footer a {
+  color: var(--rs-accent);
+  text-decoration: none;
+}
+
+.page__footer a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   11. Responsive
+   ========================================================================== */
+
+@media (max-width: 37.5em) {
+  .lang-switcher {
+    top: 4.6rem;
+    justify-content: space-between;
+    padding: 0.6rem 0.7rem;
+  }
+
+  .lang-switcher__label {
+    font-size: 0.8rem;
+  }
+
+  .research-focus-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 1.2rem 1.15rem;
+  }
+
+  .hero__name {
+    font-size: 1.5rem;
+  }
+
+  .hero__name-zh {
+    display: block;
+    margin: 0.15rem 0 0;
+    font-size: 1.2rem;
+  }
+
+  .news-list li {
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .news-list .news-list__date {
+    flex: none;
+  }
+
+  .pub-card {
+    padding: 1.1rem 1.05rem;
+  }
+}

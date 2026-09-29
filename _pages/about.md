@@ -1,103 +1,124 @@
 ---
 permalink: /
-title: "Hi there! Welcome to 尹星锟, YXK's personal page!"
+title: "Academic Homepage"
 author_profile: true
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
 ---
 
-I'm Xingkun Yin, a first-year PhD student at [NICE LAB](https://hongyangdu.github.io/nice/), from Department of Electrical and Electronic Engineering, The University of Hong Kong. I am very fortunate to be advised by Professor [Hongyang Du](https://hongyangdu.github.io/).
-
-Currently working on LLM Architecture, LLM Memory, [Experience](https://storage.googleapis.com/deepmind-media/Era-of-Experience%20/The%20Era%20of%20Experience%20Paper.pdf), Video Generation.
-
-<u>I am always open to collaboration!</u>
-
-<p>
-Feel free to contact me at [yinxingkun] [at] [connect] [dot] [hku] [dot] [hk]
-</p>
-
-As always, GLHF!
-
-(Good luck, have fun!)
-
-## Publications
-
 {% include base_path %}
 
-{% if site.publication_category %}
-  {% for post in site.publications reversed %}
-    {% assign has_known_category = false %}
-    {% for category in site.publication_category %}
-      {% if post.category == category[0] %}
-        {% assign has_known_category = true %}
-        {% break %}
-      {% endif %}
-    {% endfor %}
-    {% unless has_known_category %}
-      {% include archive-single.html %}
-    {% endunless %}
-  {% endfor %}
-  {% for category in site.publication_category %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-<h3>{{ category[1].title }}</h3><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+<div hidden data-page-title-en="Xingkun Yin | Academic Homepage" data-page-title-zh="尹星锟 | 学术主页"></div>
 
-<!-- 
-A data-driven personal website
-======
-Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured Markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various Markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
+<div class="lang-switcher" data-lang-switcher aria-label="Language switcher">
+  <span class="lang-switcher__label">
+    <span class="lang-en lang-inline">Language</span>
+    <span class="lang-zh lang-inline">语言</span>
+  </span>
+  <div class="lang-switcher__buttons">
+    <button class="lang-switcher__button is-active" type="button" data-set-lang="en" aria-pressed="true">EN</button>
+    <button class="lang-switcher__button" type="button" data-set-lang="zh" aria-pressed="false">中文</button>
+  </div>
+</div>
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your Markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over - just be sure to save the Markdown files! You can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
+<section class="hero">
+  <h1 class="hero__name">Xingkun Yin<span class="hero__name-zh">尹星锟</span></h1>
+  <p class="hero__role">
+    <span class="lang-en lang-inline">First-year Ph.D. Student, NICE Lab &middot; Department of Electrical and Electronic Engineering, The University of Hong Kong</span>
+    <span class="lang-zh lang-inline">香港大学 电机电子工程系 NICE Lab 博士研究生（一年级）</span>
+  </p>
+  <p class="hero__meta">
+    <span class="lang-en lang-inline">Advised by Prof. <a href="https://hongyangdu.github.io/">Hongyang Du</a> &middot; Hong Kong SAR</span>
+    <span class="lang-zh lang-inline">导师：<a href="https://hongyangdu.github.io/">Hongyang Du</a> 教授 &middot; 中国香港</span>
+  </p>
+  <div class="hero__actions">
+    <a class="hero__btn hero__btn--primary" href="mailto:yinxingkun@connect.hku.hk"><i class="fas fa-envelope" aria-hidden="true"></i>Email</a>
+    <a class="hero__btn" href="https://scholar.google.com/citations?user=iZxgsMUAAAAJ&amp;hl=zh-TW&amp;oi=sra"><i class="ai ai-google-scholar" aria-hidden="true"></i>Google Scholar</a>
+    <a class="hero__btn" href="https://github.com/troyyxk"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a>
+    <a class="hero__btn" href="{{ base_path }}/publications/"><i class="fas fa-book-open" aria-hidden="true"></i><span class="lang-en lang-inline">Publications</span><span class="lang-zh lang-inline">论文发表</span></a>
+  </div>
+</section>
 
-For those users that need more advanced functionality, the template also supports the following popular tools:
-- [MathJax](https://www.mathjax.org/) for mathematical equations
-- [Mermaid](https://mermaid.js.org/) for diagraming
-- [Plotly](https://plotly.com/javascript/) for plotting
+<h2 id="about-me"><span class="lang-en lang-inline">About Me</span><span class="lang-zh lang-inline">关于我</span></h2>
 
-Getting started
-======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this template](https://github.com/academicpages/academicpages.github.io) by clicking the "Use this template" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](https://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
+<div class="about-summary lang-en lang-block">
+<p>I am a first-year Ph.D. student at <a href="https://hongyangdu.github.io/nice/">NICE Lab</a>, Department of Electrical and Electronic Engineering, The University of Hong Kong, fortunate to be advised by Professor <a href="https://hongyangdu.github.io/">Hongyang Du</a>.</p>
+<p>My current research centres on <strong>LLM architecture</strong>, <strong>LLM memory</strong>, <strong>experience-driven model evolution</strong>, and <strong>video generation</strong>. I like problems that sit between systems efficiency and model capability &mdash; making large models cheaper to run without giving up what makes them useful.</p>
+<p><u>I am always open to collaboration.</u> If any of the directions above overlaps with your work, please do get in touch.</p>
+</div>
 
-Site-wide configuration
-------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
+<div class="about-summary lang-zh lang-block">
+<p>我是香港大学电机电子工程系 <a href="https://hongyangdu.github.io/nice/">NICE Lab</a> 的一年级博士研究生，很荣幸由 <a href="https://hongyangdu.github.io/">Hongyang Du</a> 教授指导。</p>
+<p>目前的研究兴趣包括<strong>大模型架构</strong>、<strong>大模型记忆</strong>、<strong>经验驱动的模型演化</strong>与<strong>视频生成</strong>。我关注系统效率与模型能力之间的交叉问题：在不让模型失去价值的前提下，让大模型跑得更便宜。</p>
+<p><u>非常欢迎合作。</u>如果上面的方向与你的研究有交集，欢迎随时联系我。</p>
+</div>
 
-Create content & metadata
-------
-For site content, there is one Markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a Markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each Markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).
+<h2 id="-news"><span class="lang-en lang-inline">News</span><span class="lang-zh lang-inline">新闻动态</span></h2>
 
-**Markdown generator**
+<ul class="news-list">
+{% assign pubs = site.publications | reverse %}
+{% for post in pubs limit:6 %}
+  {% assign fname = post.path | split: "/" | last %}
+  {% assign ny = fname | slice: 0, 4 %}
+  {% assign nm = fname | slice: 5, 2 %}
+  {% if post.paperurl %}{% assign plink = post.paperurl %}{% else %}{% assign plink = base_path | append: post.url %}{% endif %}
+  <li>
+    <span class="news-list__date">{{ ny }}.{{ nm }}</span>
+    <span class="news-list__text">
+      <span class="rs-tag"><span class="lang-en lang-inline">Paper</span><span class="lang-zh lang-inline">论文</span></span>
+      <a href="{{ plink }}">{{ post.title }}</a>{% if post.venue %} &middot; <em>{{ post.venue }}</em>{% endif %}
+    </span>
+  </li>
+{% endfor %}
+</ul>
 
-The repository includes [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
-) that converts a CSV containing structured data about talks or presentations into individual Markdown files that will be properly formatted for the Academic Pages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the Markdown files, then commit and push them to the GitHub repository.
+<h2 id="-research"><span class="lang-en lang-inline">Research Interests</span><span class="lang-zh lang-inline">研究方向</span></h2>
 
-How to edit your site's GitHub repository
-------
-Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and Markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
+<div class="research-focus-grid">
+  <div class="research-focus-item">
+    <h3><span class="lang-en lang-inline">LLM Architecture</span><span class="lang-zh lang-inline">大模型架构</span></h3>
+    <p><span class="lang-en lang-inline">Efficient architectures and inference-time acceleration for large language and diffusion transformers.</span><span class="lang-zh lang-inline">面向大语言模型与扩散 Transformer 的高效架构与推理加速。</span></p>
+  </div>
+  <div class="research-focus-item">
+    <h3><span class="lang-en lang-inline">LLM Memory</span><span class="lang-zh lang-inline">大模型记忆</span></h3>
+    <p><span class="lang-en lang-inline">Memory representation, retrieval and realignment for models that operate in dynamic, changing environments.</span><span class="lang-zh lang-inline">面向动态环境的记忆表示、检索与对齐。</span></p>
+  </div>
+  <div class="research-focus-item">
+    <h3><span class="lang-en lang-inline">Experience-Driven Evolution</span><span class="lang-zh lang-inline">经验驱动的模型演化</span></h3>
+    <p><span class="lang-en lang-inline">Post-deployment and experience scaling: how models keep improving after training through autonomous interaction and shared experience.</span><span class="lang-zh lang-inline">部署后演化与经验扩展：模型如何通过自主交互与经验共享，在训练之后持续变强。</span></p>
+  </div>
+  <div class="research-focus-item">
+    <h3><span class="lang-en lang-inline">Video Generation</span><span class="lang-zh lang-inline">视频生成</span></h3>
+    <p><span class="lang-en lang-inline">Cross-request reuse and compatibility-guided acceleration for text-to-video diffusion transformers.</span><span class="lang-zh lang-inline">文本到视频扩散 Transformer 的跨请求复用与兼容性引导加速。</span></p>
+  </div>
+</div>
 
-Example: editing a Markdown file for a talk
-![Editing a Markdown file for a talk](/images/editing-talk.png)
+<h2 id="-publications"><span class="lang-en lang-inline">Selected Publications</span><span class="lang-zh lang-inline">代表性论文</span></h2>
 
-For more info
-------
-More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/), the [growing wiki](https://github.com/academicpages/academicpages.github.io/wiki), and you can always [ask a question on GitHub](https://github.com/academicpages/academicpages.github.io/discussions). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful. -->
+{% assign selected = site.publications | reverse %}
+{% for post in selected limit:3 %}
+  {% include archive-single.html type="list" %}
+{% endfor %}
+
+<div class="rs-more">
+  <p>
+    <span class="lang-en lang-inline">See the complete list of publications, with abstracts and links.</span>
+    <span class="lang-zh lang-inline">完整论文列表（含摘要与链接）请见论文发表页面。</span>
+  </p>
+  <a class="hero__btn" href="{{ base_path }}/publications/"><i class="fas fa-arrow-right" aria-hidden="true"></i><span class="lang-en lang-inline">All Publications</span><span class="lang-zh lang-inline">全部论文</span></a>
+</div>
+
+<h2 id="-contact"><span class="lang-en lang-inline">Contact</span><span class="lang-zh lang-inline">联系方式</span></h2>
+
+<div class="about-summary lang-en lang-block">
+<p>Email: <a href="mailto:yinxingkun@connect.hku.hk">yinxingkun [at] connect [dot] hku [dot] hk</a><br />
+Address: Department of Electrical and Electronic Engineering, The University of Hong Kong, Pokfulam, Hong Kong SAR</p>
+<p>As always, GLHF! <em>(Good luck, have fun!)</em></p>
+</div>
+
+<div class="about-summary lang-zh lang-block">
+<p>邮箱：<a href="mailto:yinxingkun@connect.hku.hk">yinxingkun [at] connect [dot] hku [dot] hk</a><br />
+地址：香港特别行政区 薄扶林 香港大学 电机电子工程系</p>
+<p>As always, GLHF! <em>（Good luck, have fun!）</em></p>
+</div>
