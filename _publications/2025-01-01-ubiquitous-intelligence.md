@@ -1,6 +1,7 @@
 ---
 title: "Ubiquitous Intelligence Via Wireless Network-Driven LLMs Evolution"
 collection: publications
+badge: 'npj Wireless Technology|2025'
 # category: manuscripts
 permalink: /publication/2025-01-01-ubiquitous-intelligence
 image: /publications/paper_imgs/2025-01-01-ubiquitous-intelligence.png

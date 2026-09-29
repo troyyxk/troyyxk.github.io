@@ -1,6 +1,7 @@
 ---
 title: "Experience Scaling: Post-Deployment Evolution For Large Language Models"
 collection: publications
+badge: 'arXiv|2025'
 permalink: /publication/2025-09-23-experience-scaling
 image: /publications/paper_imgs/2025-09-23-experience-scaling.png
 # venue: 'arXiv preprint arXiv:2509.18771'

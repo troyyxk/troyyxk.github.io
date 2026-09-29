@@ -609,6 +609,40 @@ html[data-theme="dark"] .hero__btn--primary:hover {
    9. Publication cards
    ========================================================================== */
 
+/* Venue badge: two-tone label sitting inline before a paper title. The venue
+   half is neutral, the year half is red, so the acceptance venue is scannable
+   at a glance. Set `badge: 'Venue|Year'` on a publication; omit the year part
+   for a status-only label. */
+.pub-badge {
+  display: inline-flex;
+  align-items: stretch;
+  margin-right: 0.5rem;
+  border-radius: 5px;
+  overflow: hidden;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  vertical-align: 0.14em;
+  white-space: nowrap;
+}
+
+.pub-badge__venue {
+  padding: 0.4em 0.55em;
+  background: #3f4652;
+  color: #ffffff;
+}
+
+.pub-badge__year {
+  padding: 0.4em 0.5em;
+  background: #c0392b;
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .pub-badge__venue {
+  background: #5b6472;
+}
+
 .pub-card {
   padding: 1.3rem 1.4rem;
   margin-bottom: 1.3rem;

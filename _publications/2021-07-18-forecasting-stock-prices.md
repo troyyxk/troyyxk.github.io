@@ -1,6 +1,7 @@
 ---
 title: "Forecasting Stock Prices Using Stock Correlation Graph: A Graph Convolutional Network Approach"
 collection: publications
+badge: 'IJCNN|2021'
 # category: conferences
 permalink: /publication/2021-07-18-forecasting-stock-prices
 image: /publications/paper_imgs/2021-07-18-forecasting-stock-prices.png
