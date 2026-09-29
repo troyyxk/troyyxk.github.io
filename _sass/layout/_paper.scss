@@ -278,6 +278,7 @@ html[data-theme="dark"] .paper-hero__venue--accepted {
    A row holds two related diagrams side by side; they stack on a narrow
    screen, and each keeps its own caption and number. */
 .paper-figure {
+  display: block;
   margin: 1.5rem 0;
 }
 
@@ -290,7 +291,8 @@ html[data-theme="dark"] .paper-hero__venue--accepted {
 
 .paper-figure-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.2rem;
   margin: 1.5rem 0;
 }
