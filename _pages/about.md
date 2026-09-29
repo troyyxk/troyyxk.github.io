@@ -103,7 +103,7 @@ redirect_from:
     <span class="news-list__date">2025.08</span>
     <span class="news-list__text">
       <span class="rs-tag"><span class="lang-en lang-inline">Milestone</span><span class="lang-zh lang-inline">里程碑</span></span>
-      <span class="lang-en lang-inline">Started my Ph.D. at <a href="https://hongyangdu.github.io/nice/">NICE Lab</a>, The University of Hong Kong. Expected graduation: July 2029.</span><span class="lang-zh lang-inline">入学<a href="https://hongyangdu.github.io/nice/">NICE Lab</a>（香港大学）攻读博士学位，预计 2029 年 7 月毕业。</span>
+      <span class="lang-en lang-inline">Started my Ph.D. at <a href="https://hongyangdu.github.io/nice/">NICE Lab</a>, The University of Hong Kong! Expected graduation: July 2029.</span><span class="lang-zh lang-inline">入学<a href="https://hongyangdu.github.io/nice/">NICE Lab</a>（香港大学）攻读博士学位，预计 2029 年 7 月毕业。</span>
     </span>
   </li>
 </ul>
