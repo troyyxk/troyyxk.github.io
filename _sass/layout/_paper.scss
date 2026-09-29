@@ -303,6 +303,18 @@ html[data-theme="dark"] .paper-hero__venue--accepted {
   text-align: left;
 }
 
+/* A demo video sits in the same frame as a figure. Only its poster is fetched
+   up front, so a ten-megabyte clip costs nothing until it is played. */
+.paper-figure video {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--rs-border);
+  border-radius: var(--rs-radius-sm);
+  background: #000000;
+}
+
 /* Two related diagrams side by side; they stack on a narrow screen. */
 .paper-figure-row {
   display: grid;
