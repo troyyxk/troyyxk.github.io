@@ -817,17 +817,44 @@ html[data-theme="dark"] .paper-hero .note-chip {
   color: #f0c36a;
 }
 
+/* The card introduces the paper the way a project page does: badge and title,
+   the one-line summary, then the paper's own figure underneath and centred,
+   instead of a small thumbnail squeezed beside the text. */
 .pub-card__layout {
-  gap: 1.4rem;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1.1rem;
+}
+
+.pub-card__content {
+  order: 1;
 }
 
 .pub-card__image {
-  flex: 0 0 265px;
-  max-width: 265px;
+  order: 2;
+  flex: none;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
   border: 1px solid var(--rs-border);
   border-radius: var(--rs-radius-sm);
   background: var(--rs-surface);
   box-shadow: none;
+}
+
+/* The figure is capped by height, so a wide teaser fills the card while a
+   near-square one still fits above the fold. */
+.pub-card__image img {
+  width: auto;
+  max-width: 100%;
+  max-height: 420px;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  .pub-card__image img {
+    max-height: 260px;
+  }
 }
 
 html[data-theme="dark"] .pub-card__image {
