@@ -107,6 +107,22 @@ redirect_from:
   </li>
 </ul>
 
+<h2 id="service"><span class="lang-en lang-inline">Academic Service</span><span class="lang-zh lang-inline">学术服务</span></h2>
+
+<div class="lang-en lang-block">
+  <h3>Conference Reviewer</h3>
+  <ul>
+    <li>ICML, NeurIPS, ICLR, AAAI, EMNLP</li>
+  </ul>
+</div>
+
+<div class="lang-zh lang-block">
+  <h3>会议审稿</h3>
+  <ul>
+    <li>ICML、NeurIPS、ICLR、AAAI、EMNLP</li>
+  </ul>
+</div>
+
 <h2 id="contact"><span class="lang-en lang-inline">Contact</span><span class="lang-zh lang-inline">联系方式</span></h2>
 
 <div class="about-summary lang-en lang-block">
