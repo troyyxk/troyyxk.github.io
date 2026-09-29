@@ -100,7 +100,7 @@
     {% endif %}
     
     {% if post.collection == 'publications' and post.description %}
-      <p><span class="lang-en lang-inline">{{ post.description }}</span><span class="lang-zh lang-inline">{{ post.description_zh | default: post.description }}</span>{% if post.paperurl %}<br /><a href="{{ post.paperurl }}"><span class="lang-en lang-inline">View Paper</span><span class="lang-zh lang-inline">查看论文</span></a>{% endif %}</p>
+      <p><span class="lang-en lang-inline">{{ post.description }}</span><span class="lang-zh lang-inline">{{ post.description_zh | default: post.description }}</span><br /><a href="{{ base_path }}{{ post.url }}"><span class="lang-en lang-inline">View Paper</span><span class="lang-zh lang-inline">查看论文</span></a></p>
     {% elsif post.description and post.paperurl and post.slidesurl and post.bibtexurl %}
       <p>{{ post.description }}<br /><a href="{{ post.paperurl }}">View Paper</a> | <a href="{{ post.slidesurl }}">Download Slides</a> | <a href="{{ post.bibtexurl }}">Download Bibtex</a></p>
     {% elsif post.description and post.paperurl and post.slidesurl %}
