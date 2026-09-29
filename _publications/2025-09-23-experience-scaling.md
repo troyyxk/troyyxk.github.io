@@ -1,5 +1,6 @@
 ---
 title: "Experience Scaling: Post-Deployment Evolution For Large Language Models"
+title_zh: "Experience Scaling：大模型的部署后演化"
 collection: publications
 badge: 'arXiv|2025'
 permalink: /publication/2025-09-23-experience-scaling
@@ -10,6 +11,7 @@ paperurl: 'https://arxiv.org/abs/2509.18771'
 # from the first paragraph of the article body (only `description` is shown).
 excerpt_separator: ""
 description: 'A framework for continuous post-deployment evolution for LLMs through autonomous interaction with the environment and collaborative sharing of accumulated experience.'
+description_zh: '一个让大模型通过与环境的自主交互、以及协同共享所积累的经验，在部署之后持续演化的框架。'
 ---
 
 <section class="paper-hero">
