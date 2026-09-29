@@ -43,7 +43,7 @@ redirect_from:
 <p>我是香港大学电机与计算机工程系 <a href="https://hongyangdu.github.io/nice/">NICE Lab</a> 的二年级博士研究生，很荣幸由 <a href="https://hongyangdu.github.io/">杜泓阳</a>教授指导。</p>
 <p>我的研究兴趣包括<strong>大模型架构</strong>、<strong>大模型记忆</strong>、<strong>经验驱动的模型演化</strong>和<strong>视频生成</strong>。我尤其关注模型能力与系统效率之间的交叉问题。</p>
 <p>最让我兴奋的研究课题，是让模型在训练结束后依然能够持续进化、思考并从经验中学习，就像人脑一样，让学习贯穿模型的整个生命周期，从而实现通用人工智能（AGI）与递归自我改进（RSI）。</p>
-<p><u>非常欢迎合作。</u>如果上面的方向与你的研究有交集，欢迎随时联系我。</p>
+<p><u>非常欢迎合作。</u>如果上面的方向与您的研究有交集，欢迎随时联系我。</p>
 </div>
 
 <h2 id="research"><span class="lang-en lang-inline">Research Interests</span><span class="lang-zh lang-inline">研究方向</span></h2>
