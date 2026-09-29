@@ -26,6 +26,10 @@ main:
     title_zh: "新闻"
     url: /#news
 
+  - title: "Contact"
+    title_zh: "联系"
+    url: /#contact
+
   # - title: "Talks"
   #   url: /talks/    
 
