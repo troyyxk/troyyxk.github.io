@@ -102,7 +102,7 @@ redirect_from:
     <span class="news-list__date">2025.08</span>
     <span class="news-list__text">
       <span class="rs-tag"><span class="lang-en lang-inline">Milestone</span><span class="lang-zh lang-inline">里程碑</span></span>
-      <span class="lang-en lang-inline">Started my Ph.D. at The University of Hong Kong! Expected to graduate at July 2029.</span><span class="lang-zh lang-inline">入学香港大学攻读博士学位，预计 2029 年 7 月毕业。</span>
+      <span class="lang-en lang-inline">Started my Ph.D. at The University of Hong Kong! Expected to graduate at July 2029.</span><span class="lang-zh lang-inline">入学香港大学攻读博士学位！预计 2029 年 7 月毕业。</span>
     </span>
   </li>
 </ul>
