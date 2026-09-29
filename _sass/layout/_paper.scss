@@ -1,0 +1,213 @@
+/* ==========================================================================
+   Paper page — a Chorus-style presentation for a single publication.
+   Everything is scoped with :has(.paper-hero) so no other page is affected;
+   only a page that opens with the hero section picks any of this up.
+   ========================================================================== */
+
+/* The layout prints its own <h1 class="page__title"> plus date/venue line.
+   The hero carries all of that, so drop the duplicate. */
+.page__inner-wrap:has(.paper-hero) > header {
+  display: none;
+}
+
+.paper-hero {
+  margin: 0 0 1.5rem;
+  padding: 0 0 1.25rem;
+  border-bottom: 1px solid var(--rs-border);
+}
+
+.paper-hero__venue {
+  margin: 0 0 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--rs-accent);
+}
+
+.paper-hero__title {
+  margin: 0 0 0.3rem;
+  font-size: 2.1rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: var(--rs-heading);
+}
+
+.paper-hero__subtitle {
+  margin: 0 0 0.9rem;
+  font-size: 1.05rem;
+  line-height: 1.45;
+  color: var(--rs-muted);
+}
+
+.paper-hero__authors {
+  margin: 0 0 1.15rem;
+  font-size: 0.95rem;
+  color: var(--rs-body);
+}
+
+.paper-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.paper-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 0.95rem;
+  border: 1px solid var(--rs-border);
+  border-radius: 999px;
+  background: var(--rs-card);
+  color: var(--rs-heading);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color 0.18s ease, color 0.18s ease, background 0.18s ease;
+}
+
+.paper-btn:hover,
+.paper-btn:focus {
+  border-color: var(--rs-accent);
+  color: var(--rs-accent);
+  text-decoration: none;
+}
+
+.paper-btn--primary {
+  border-color: var(--rs-accent);
+  background: var(--rs-accent);
+  color: #ffffff;
+}
+
+.paper-btn--primary:hover,
+.paper-btn--primary:focus {
+  background: var(--rs-accent-strong, var(--rs-accent));
+  color: #ffffff;
+  opacity: 0.92;
+}
+
+/* Section jumps, mirroring the reference project page. */
+.paper-toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.1rem;
+  margin: 0 0 2rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--rs-border);
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.paper-toc a {
+  color: var(--rs-muted);
+  text-decoration: none;
+}
+
+.paper-toc a:hover,
+.paper-toc a:focus {
+  color: var(--rs-accent);
+  text-decoration: underline;
+}
+
+/* --- Content polish, scoped to the paper page ------------------------------ */
+
+.page__content:has(.paper-hero) {
+  h2 {
+    margin-top: 2.4rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid var(--rs-border);
+    font-size: 1.35rem;
+    scroll-margin-top: 5.5rem;
+  }
+
+  h3 {
+    margin-top: 1.7rem;
+    font-size: 1.05rem;
+    scroll-margin-top: 5.5rem;
+  }
+
+  /* Figures sit in a card and their caption reads as a caption rather than
+     as body copy (the source marks captions with *italics*). */
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--rs-border);
+    border-radius: var(--rs-radius-sm);
+    background: var(--rs-card);
+  }
+
+  > p:has(> em:only-child) {
+    margin-top: 0.6rem;
+    font-size: 0.86rem;
+    line-height: 1.5;
+    color: var(--rs-muted);
+  }
+
+  /* Tables: the source puts "Table N: ..." in a bold paragraph right before. */
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    margin: 1.1rem 0;
+    border: 1px solid var(--rs-border);
+    border-radius: var(--rs-radius-sm);
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 0.82rem;
+  }
+
+  thead th {
+    background: var(--rs-surface);
+    color: var(--rs-heading);
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  th,
+  td {
+    padding: 0.5rem 0.7rem;
+    border-bottom: 1px solid var(--rs-border);
+    text-align: right;
+  }
+
+  th:first-child,
+  td:first-child {
+    text-align: left;
+  }
+
+  tbody tr:last-child td {
+    border-bottom: 0;
+  }
+
+  tbody tr:hover td {
+    background: var(--rs-surface);
+  }
+
+  /* Emphasis used for the winning row already renders bold; keep it visible. */
+  tbody td strong {
+    color: var(--rs-heading);
+  }
+
+  pre {
+    border: 1px solid var(--rs-border);
+    border-radius: var(--rs-radius-sm);
+  }
+}
+
+@media (max-width: 37.5em) {
+  .paper-hero__title {
+    font-size: 1.65rem;
+  }
+
+  .paper-hero__subtitle {
+    font-size: 0.98rem;
+  }
+
+  .paper-toc {
+    gap: 0.35rem 0.85rem;
+    font-size: 0.82rem;
+  }
+}
