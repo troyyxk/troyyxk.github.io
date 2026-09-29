@@ -21,7 +21,7 @@ redirect_from:
   </ul>
   <p class="hero__meta">
     <span class="lang-en lang-inline">Advised by Prof. <a href="https://hongyangdu.github.io/">Hongyang Du</a> &middot; HKU ECE</span>
-    <span class="lang-zh lang-inline">导师：<a href="https://hongyangdu.github.io/">杜泓阳</a>教授 &middot; HKU ECE</span>
+    <span class="lang-zh lang-inline">导师：<a href="https://hongyangdu.github.io/">杜泓阳</a>教授 &middot; 香港大学 电机与计算机工程系</span>
   </p>
   <div class="hero__actions">
     <a class="hero__btn hero__btn--primary" href="{{ base_path }}/publications/"><i class="fas fa-book-open" aria-hidden="true"></i><span class="lang-en lang-inline">Publications</span><span class="lang-zh lang-inline">论文发表</span></a>
