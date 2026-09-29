@@ -15,7 +15,7 @@ description: 'A framework for continuous post-deployment evolution for LLMs thro
 <section class="paper-hero">
   <p class="paper-hero__venue"><span class="lang-en lang-inline">arXiv preprint</span><span class="lang-zh lang-inline">arXiv 预印本</span> &middot; 2025</p>
   <h1 class="paper-hero__title">Experience Scaling</h1>
-  <p class="paper-hero__subtitle">Post-Deployment Evolution for Large Language Models</p>
+  <p class="paper-hero__subtitle"><span class="lang-zh lang-block">大模型的部署后演化</span>Post-Deployment Evolution for Large Language Models</p>
   <p class="paper-hero__authors">Xingkun Yin, Kaibin Huang, Dong In Kim, Hongyang Du</p>
   <div class="paper-hero__actions">
     <a class="paper-btn paper-btn--primary" href="https://arxiv.org/abs/2509.18771"><i class="fa-solid fa-file-lines" aria-hidden="true"></i><span class="lang-en lang-inline">Paper (arXiv)</span><span class="lang-zh lang-inline">论文全文（arXiv）</span></a>

@@ -17,7 +17,7 @@ description: 'A graph convolutional network approach that leverages stock correl
 <section class="paper-hero">
   <p class="paper-hero__venue">IJCNN 2021 &middot; IEEE</p>
   <h1 class="paper-hero__title">Forecasting Stock Prices Using Stock Correlation Graph</h1>
-  <p class="paper-hero__subtitle">A Graph Convolutional Network Approach</p>
+  <p class="paper-hero__subtitle"><span class="lang-zh lang-block">一种图卷积网络方法</span>A Graph Convolutional Network Approach</p>
   <p class="paper-hero__authors">Xingkun Yin, Da Yan, Abdullateef Almudaifer, Sibo Yan, Yang Zhou</p>
   <div class="paper-hero__actions">
     <a class="paper-btn paper-btn--primary" href="https://ieeexplore.ieee.org/document/9533510"><i class="fa-solid fa-file-lines" aria-hidden="true"></i><span class="lang-en lang-inline">Paper (IEEE)</span><span class="lang-zh lang-inline">论文全文（IEEE）</span></a>
