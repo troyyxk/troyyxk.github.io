@@ -71,7 +71,15 @@
       {% endif %}
       </span>
     </h2>
-    
+
+    {% comment %}
+      Optional note under the title, for news worth shouting about (a paper
+      being used in practice, an award). `note_zh` falls back to `note`.
+    {% endcomment %}
+    {% if post.note %}
+      <p class="pub-note"><span class="lang-en lang-inline">{{ post.note }}</span><span class="lang-zh lang-inline">{{ post.note_zh | default: post.note }}</span></p>
+    {% endif %}
+
     {% if post.read_time %}
       <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}

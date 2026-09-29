@@ -13,6 +13,8 @@ codeurl: 'https://github.com/troyyxk/gcgru_stock_prediction'
 excerpt_separator: ""
 description: 'A graph convolutional network approach that leverages stock correlation graphs to forecast stock prices.'
 description_zh: '一种利用股票之间的相关性图来预测股价的图卷积网络方法。'
+note: 'Glad to see this work being used in live trading by multiple quant firms :)'
+note_zh: '很高兴看到这项研究被多家量化机构实盘采用 :)'
 ---
 
 <section class="paper-hero">
