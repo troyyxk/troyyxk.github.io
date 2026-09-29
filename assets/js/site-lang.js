@@ -57,10 +57,7 @@
     document.documentElement.setAttribute('data-site-lang', lang);
     document.documentElement.setAttribute('lang', lang === 'zh' ? 'zh-Hans' : 'en');
     syncButtons(lang);
-
-    if (document.querySelector('[data-lang-switcher]')) {
-      syncDocumentTitle(lang);
-    }
+    syncDocumentTitle(lang);
   }
 
   function init() {

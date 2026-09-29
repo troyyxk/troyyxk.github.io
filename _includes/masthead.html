@@ -18,12 +18,18 @@
               <a href="{{ domain }}{{ link.url }}"><span class="lang-en lang-inline">{{ link.title }}</span><span class="lang-zh lang-inline">{{ link.title_zh | default: link.title }}</span></a>
             </li>
           {% endfor %}
-          <li id="theme-toggle" class="masthead__menu-item persist tail">
-            <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
-          </li>
         </ul>
         <ul class="hidden-links hidden"></ul>
       </nav>
+      <div class="masthead__controls">
+        <button id="theme-toggle" class="masthead__icon-btn" type="button" aria-label="Toggle dark mode">
+          <i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i>
+        </button>
+        <div class="lang-toggle" data-lang-switcher role="group" aria-label="Language switcher">
+          <button class="lang-toggle__button is-active" type="button" data-set-lang="en" aria-pressed="true">ENG</button>
+          <button class="lang-toggle__button" type="button" data-set-lang="zh" aria-pressed="false">中文</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>

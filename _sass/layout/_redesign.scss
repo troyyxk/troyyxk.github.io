@@ -66,6 +66,7 @@ html[data-theme="dark"] {
 
 /* ==========================================================================
    2. Language switching (shown / hidden via html[data-site-lang])
+      The toggle itself lives in the masthead, pinned to the right edge.
    ========================================================================== */
 
 .lang-block,
@@ -91,62 +92,85 @@ html[data-site-lang="zh"] .lang-zh.lang-inline {
   display: inline;
 }
 
-.lang-switcher {
-  position: sticky;
-  top: 5.25rem;
-  z-index: 15;
+/* Masthead layout: nav on the left, controls pinned to the right edge.
+   Flex (rather than the theme's `display: table`) is what makes right
+   alignment possible while greedy-navigation still measures the nav. */
+.masthead__menu {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  gap: 0.75rem;
-  margin-bottom: 1.6rem;
-  padding: 0.7rem 0.85rem;
-  border: 1px solid var(--rs-accent-line);
-  border-radius: 999px;
-  background: var(--rs-card);
-  box-shadow: var(--rs-shadow-sm);
+  gap: 1rem;
 }
 
-.lang-switcher__label {
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
+.masthead__menu .greedy-nav {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.masthead__controls {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+.masthead__icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--rs-muted);
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.masthead__icon-btn:hover {
+  background: var(--rs-accent-soft);
   color: var(--rs-accent);
 }
 
-.lang-switcher__buttons {
+.lang-toggle {
   display: inline-flex;
   align-items: center;
-  gap: 0.3rem;
-  padding: 0.22rem;
+  gap: 0.15rem;
+  padding: 0.2rem;
+  border: 1px solid var(--rs-accent-line);
   border-radius: 999px;
   background: var(--rs-accent-soft);
 }
 
-.lang-switcher__button {
+.lang-toggle__button {
   border: 0;
   border-radius: 999px;
-  padding: 0.4rem 0.95rem;
+  padding: 0.3rem 0.7rem;
   background: transparent;
   color: var(--rs-muted);
-  font-size: 0.82rem;
+  font-size: 0.76rem;
   font-weight: 700;
   line-height: 1;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
   cursor: pointer;
   transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.lang-switcher__button:hover {
+.lang-toggle__button:hover {
   color: var(--rs-accent);
 }
 
-.lang-switcher__button.is-active {
+.lang-toggle__button.is-active {
   background: var(--rs-accent);
   color: #ffffff;
-  box-shadow: 0 8px 18px rgba(0, 54, 159, 0.24);
+  box-shadow: 0 6px 14px rgba(0, 54, 159, 0.22);
 }
 
-html[data-theme="dark"] .lang-switcher__button.is-active {
+html[data-theme="dark"] .lang-toggle__button.is-active {
   color: #10151f;
 }
 
@@ -637,14 +661,30 @@ html[data-theme="dark"] .pub-card__image {
    ========================================================================== */
 
 @media (max-width: 37.5em) {
-  .lang-switcher {
-    top: 4.6rem;
-    justify-content: space-between;
-    padding: 0.6rem 0.7rem;
+  .masthead__inner-wrap {
+    padding: 0.55em 0.75em;
   }
 
-  .lang-switcher__label {
-    font-size: 0.8rem;
+  .masthead__menu {
+    gap: 0.5rem;
+  }
+
+  .masthead__controls {
+    gap: 0.25rem;
+  }
+
+  .masthead__icon-btn {
+    width: 30px;
+    height: 30px;
+  }
+
+  .lang-toggle {
+    padding: 0.15rem;
+  }
+
+  .lang-toggle__button {
+    padding: 0.28rem 0.55rem;
+    font-size: 0.72rem;
   }
 
   .research-focus-grid {

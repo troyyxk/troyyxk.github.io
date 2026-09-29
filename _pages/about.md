@@ -11,17 +11,6 @@ redirect_from:
 
 <div hidden data-page-title-en="Xingkun Yin | Academic Homepage" data-page-title-zh="尹星锟 | 学术主页"></div>
 
-<div class="lang-switcher" data-lang-switcher aria-label="Language switcher">
-  <span class="lang-switcher__label">
-    <span class="lang-en lang-inline">Language</span>
-    <span class="lang-zh lang-inline">语言</span>
-  </span>
-  <div class="lang-switcher__buttons">
-    <button class="lang-switcher__button is-active" type="button" data-set-lang="en" aria-pressed="true">EN</button>
-    <button class="lang-switcher__button" type="button" data-set-lang="zh" aria-pressed="false">中文</button>
-  </div>
-</div>
-
 <section class="hero">
   <h1 class="hero__name">Xingkun Yin<span class="hero__name-zh">尹星锟</span></h1>
   <p class="hero__role">
