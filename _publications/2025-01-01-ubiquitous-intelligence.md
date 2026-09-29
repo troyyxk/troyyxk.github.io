@@ -7,6 +7,6 @@ permalink: /publication/2025-01-01-ubiquitous-intelligence
 image: /publications/paper_imgs/2025-01-01-ubiquitous-intelligence.png
 venue: 'npj Wireless Technology'
 paperurl: 'https://www.nature.com/articles/s44386-025-00010-7'
-description: 'We introduce ubiquitous intelligence as a paradigm where LLMs evolve within wireless network-driven ecosystems.'
+description: 'A paradigm where LLMs evolve within wireless network-driven ecosystems through continuous coordination between networks and models.'
 ---
 
