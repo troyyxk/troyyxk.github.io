@@ -17,7 +17,7 @@ description_zh: '一种让大模型在无线网络驱动的生态中、通过网
 <section class="paper-hero">
   <p class="paper-hero__venue paper-hero__venue--accepted">npj Wireless Technology &middot; 2025</p>
   <h1 class="paper-hero__title">Ubiquitous Intelligence</h1>
-  <p class="paper-hero__subtitle"><span class="lang-zh lang-block">基于无线网络驱动的大模型演化</span>Via Wireless Network-Driven LLMs Evolution</p>
+  <p class="paper-hero__subtitle"><span class="lang-zh lang-block">泛在智能：基于无线网络驱动的大模型演化</span>{{ page.title }}</p>
   <p class="paper-hero__authors">Xingkun Yin, Feiran You, Hongyang Du, Kaibin Huang</p>
   <div class="paper-hero__actions">
     <a class="paper-btn paper-btn--primary" href="https://www.nature.com/articles/s44386-025-00010-7"><i class="fa-solid fa-file-lines" aria-hidden="true"></i><span class="lang-en lang-inline">Paper (npj)</span><span class="lang-zh lang-inline">论文全文（npj）</span></a>
