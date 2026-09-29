@@ -13,7 +13,7 @@ title                    : "Yin, Xingkun's Page"  # Wordmark in the masthead and
 title_zh                 : "尹星锟的主页"           # Masthead wordmark when 中文 is selected
 title_separator          : "-"
 name                     : &name "Xingkun Yin"    # Shown in the footer copyright line
-description              : &description "Xingkun Yin is a first-year Ph.D. student at NICE Lab, The University of Hong Kong, working on LLM architecture, LLM memory, experience scaling and video generation."
+description              : &description "Xingkun Yin is a second-year Ph.D. student at NICE Lab, The University of Hong Kong, working on LLM architecture, LLM memory, experience scaling and video generation."
 url                      : https://troyyxk.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -29,7 +29,7 @@ author:
   avatar           : "xingkun.jpg"
   name             : "Xingkun YIN"
   pronouns         : # example: "she/her"  
-  bio              : "First-year Ph.D. student at NICE Lab, HKU ECE"
+  bio              : "Second-year Ph.D. student at NICE Lab, HKU ECE"
   bio_zh           : "香港大学 电机与计算机工程系 NICE Lab 博士研究生"
   location         : "Hong Kong SAR"
   location_zh      : "中国香港"

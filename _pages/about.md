@@ -14,8 +14,8 @@ redirect_from:
 <section class="hero">
   <h1 class="hero__name">Xingkun Yin<span class="hero__name-zh">尹星锟</span></h1>
   <p class="hero__role">
-    <span class="lang-en lang-inline">First-year Ph.D. Student, NICE Lab &middot; Department of Electrical and Computer Engineering, The University of Hong Kong</span>
-    <span class="lang-zh lang-inline">香港大学 电机与计算机工程系 NICE Lab 博士研究生（一年级）</span>
+    <span class="lang-en lang-inline">Second-year Ph.D. Student, NICE Lab &middot; Department of Electrical and Computer Engineering, The University of Hong Kong</span>
+    <span class="lang-zh lang-inline">香港大学 电机与计算机工程系 NICE Lab 博士研究生（二年级）</span>
   </p>
   <p class="hero__meta">
     <span class="lang-en lang-inline">Advised by Prof. <a href="https://hongyangdu.github.io/">Hongyang Du</a> &middot; Hong Kong SAR</span>
@@ -32,13 +32,13 @@ redirect_from:
 <h2 id="about-me"><span class="lang-en lang-inline">About Me</span><span class="lang-zh lang-inline">关于我</span></h2>
 
 <div class="about-summary lang-en lang-block">
-<p>I am a first-year Ph.D. student at <a href="https://hongyangdu.github.io/nice/">NICE Lab</a>, Department of Electrical and Computer Engineering, The University of Hong Kong, fortunate to be advised by Professor <a href="https://hongyangdu.github.io/">Hongyang Du</a>.</p>
+<p>I am a second-year Ph.D. student at <a href="https://hongyangdu.github.io/nice/">NICE Lab</a>, Department of Electrical and Computer Engineering, The University of Hong Kong, fortunate to be advised by Professor <a href="https://hongyangdu.github.io/">Hongyang Du</a>.</p>
 <p>My current research centres on <strong>LLM architecture</strong>, <strong>LLM memory</strong>, <strong>experience-driven model evolution</strong>, and <strong>video generation</strong>. I like problems that sit between systems efficiency and model capability &mdash; making large models cheaper to run without giving up what makes them useful.</p>
 <p><u>I am always open to collaboration.</u> If any of the directions above overlaps with your work, please do get in touch.</p>
 </div>
 
 <div class="about-summary lang-zh lang-block">
-<p>我是香港大学电机与计算机工程系 <a href="https://hongyangdu.github.io/nice/">NICE Lab</a> 的一年级博士研究生，很荣幸由 <a href="https://hongyangdu.github.io/">Hongyang Du</a> 教授指导。</p>
+<p>我是香港大学电机与计算机工程系 <a href="https://hongyangdu.github.io/nice/">NICE Lab</a> 的二年级博士研究生，很荣幸由 <a href="https://hongyangdu.github.io/">Hongyang Du</a> 教授指导。</p>
 <p>目前的研究兴趣包括<strong>大模型架构</strong>、<strong>大模型记忆</strong>、<strong>经验驱动的模型演化</strong>与<strong>视频生成</strong>。我关注系统效率与模型能力之间的交叉问题：在不让模型失去价值的前提下，让大模型跑得更便宜。</p>
 <p><u>非常欢迎合作。</u>如果上面的方向与你的研究有交集，欢迎随时联系我。</p>
 </div>
