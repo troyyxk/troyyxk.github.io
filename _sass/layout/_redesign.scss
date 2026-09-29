@@ -461,13 +461,21 @@ img.author__avatar {
 }
 
 .hero__name {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 1.85rem;
-  font-weight: 800;
   line-height: 1.2;
   letter-spacing: -0.025em;
+  color: var(--rs-heading);
+}
+
+.hero__name-en {
+  font-size: 1.85rem;
+  font-weight: 800;
   color: var(--rs-heading);
 }
 
@@ -475,7 +483,21 @@ img.author__avatar {
   font-size: 1.45rem;
   font-weight: 700;
   color: var(--rs-muted);
-  margin-left: 0.35rem;
+}
+
+/* In the Chinese view the Chinese name leads and the romanisation follows. */
+html[data-site-lang="zh"] .hero__name-en {
+  order: 2;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--rs-muted);
+}
+
+html[data-site-lang="zh"] .hero__name-zh {
+  order: 1;
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--rs-heading);
 }
 
 /* Research keywords. The card carries what the person works on; the sidebar
@@ -846,13 +868,25 @@ html[data-theme="dark"] .pub-card__image {
   }
 
   .hero__name {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.1rem;
+  }
+
+  .hero__name-en {
     font-size: 1.5rem;
   }
 
   .hero__name-zh {
-    display: block;
-    margin: 0.15rem 0 0;
     font-size: 1.2rem;
+  }
+
+  html[data-site-lang="zh"] .hero__name-en {
+    font-size: 1.2rem;
+  }
+
+  html[data-site-lang="zh"] .hero__name-zh {
+    font-size: 1.5rem;
   }
 
   .hero__tags li {
