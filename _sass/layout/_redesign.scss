@@ -627,21 +627,21 @@ html[data-theme="dark"] .hero__btn--primary:hover {
    ========================================================================== */
 
 .research-focus {
-  margin: 1.2rem 0 1.8rem;
-  padding: 1.1rem 1.3rem 1.1rem 1.4rem;
+  margin: 0.9rem 0 1.35rem;
+  padding: 0.85rem 1.1rem 0.85rem 1.15rem;
   border-left: 3px solid var(--rs-accent);
   border-radius: 0 var(--rs-radius-sm) var(--rs-radius-sm) 0;
   background: var(--rs-surface);
 }
 
 .research-focus h3 {
-  margin: 1.6rem 0 0.4rem;
+  margin: 0.85rem 0 0.2rem;
   padding: 0;
   border: 0;
   color: var(--rs-heading);
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 700;
-  line-height: 1.4;
+  line-height: 1.3;
 }
 
 .research-focus h3:first-child {
@@ -651,8 +651,8 @@ html[data-theme="dark"] .hero__btn--primary:hover {
 .research-focus p {
   margin: 0;
   color: var(--rs-body);
-  font-size: 0.92rem;
-  line-height: 1.65;
+  font-size: 0.88rem;
+  line-height: 1.45;
 }
 
 /* ==========================================================================
@@ -860,7 +860,7 @@ html[data-theme="dark"] .pub-card__image {
   }
 
   .research-focus {
-    padding: 0.9rem 1rem 0.9rem 1.1rem;
+    padding: 0.75rem 0.9rem 0.75rem 0.95rem;
   }
 
   .hero {
