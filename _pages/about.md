@@ -45,25 +45,6 @@ redirect_from:
 <p><u>非常欢迎合作。</u>如果上面的方向与你的研究有交集，欢迎随时联系我。</p>
 </div>
 
-<h2 id="-news"><span class="lang-en lang-inline">News</span><span class="lang-zh lang-inline">新闻动态</span></h2>
-
-<ul class="news-list">
-{% assign pubs = site.publications | reverse %}
-{% for post in pubs limit:6 %}
-  {% assign fname = post.path | split: "/" | last %}
-  {% assign ny = fname | slice: 0, 4 %}
-  {% assign nm = fname | slice: 5, 2 %}
-  {% if post.paperurl %}{% assign plink = post.paperurl %}{% else %}{% assign plink = base_path | append: post.url %}{% endif %}
-  <li>
-    <span class="news-list__date">{{ ny }}.{{ nm }}</span>
-    <span class="news-list__text">
-      <span class="rs-tag"><span class="lang-en lang-inline">Paper</span><span class="lang-zh lang-inline">论文</span></span>
-      <a href="{{ plink }}">{{ post.title }}</a>{% if post.venue %} &middot; <em>{{ post.venue }}</em>{% endif %}
-    </span>
-  </li>
-{% endfor %}
-</ul>
-
 <h2 id="-research"><span class="lang-en lang-inline">Research Interests</span><span class="lang-zh lang-inline">研究方向</span></h2>
 
 <div class="research-focus-grid">
@@ -113,3 +94,29 @@ Address: Department of Electrical and Computer Engineering, The University of Ho
 地址：香港特别行政区 薄扶林 香港大学 电机与计算机工程系</p>
 <p>As always, GLHF! <em>（Good luck, have fun!）</em></p>
 </div>
+
+<h2 id="-news"><span class="lang-en lang-inline">News</span><span class="lang-zh lang-inline">新闻动态</span></h2>
+
+<ul class="news-list">
+  <li>
+    <span class="news-list__date">2025.08</span>
+    <span class="news-list__text">
+      <span class="rs-tag"><span class="lang-en lang-inline">Milestone</span><span class="lang-zh lang-inline">里程碑</span></span>
+      <span class="lang-en lang-inline">Started my Ph.D. at <a href="https://hongyangdu.github.io/nice/">NICE Lab</a>, The University of Hong Kong. Expected graduation: July 2029.</span><span class="lang-zh lang-inline">入学<a href="https://hongyangdu.github.io/nice/">NICE Lab</a>（香港大学）攻读博士学位，预计 2029 年 7 月毕业。</span>
+    </span>
+  </li>
+  <li>
+    <span class="news-list__date">2025.11</span>
+    <span class="news-list__text">
+      <span class="rs-tag"><span class="lang-en lang-inline">Paper</span><span class="lang-zh lang-inline">论文</span></span>
+      <span class="lang-en lang-inline"><a href="https://www.nature.com/articles/s44386-025-00010-7">Ubiquitous Intelligence Via Wireless Network-Driven LLMs Evolution</a> was accepted to <em>npj Wireless Technology</em>!</span><span class="lang-zh lang-inline">论文<a href="https://www.nature.com/articles/s44386-025-00010-7">《Ubiquitous Intelligence Via Wireless Network-Driven LLMs Evolution》</a>被 <em>npj Wireless Technology</em> 接收！</span>
+    </span>
+  </li>
+  <li>
+    <span class="news-list__date">2026.09</span>
+    <span class="news-list__text">
+      <span class="rs-tag"><span class="lang-en lang-inline">Paper</span><span class="lang-zh lang-inline">论文</span></span>
+      <span class="lang-en lang-inline"><a href="https://arxiv.org/abs/2601.19249">GLOVE: Global Verifier for LLM Memory-Environment Realignment</a> was accepted to <strong>NeurIPS 2026</strong>!</span><span class="lang-zh lang-inline">论文<a href="https://arxiv.org/abs/2601.19249">《GLOVE: Global Verifier for LLM Memory-Environment Realignment》</a>被 <strong>NeurIPS 2026</strong> 接收！</span>
+    </span>
+  </li>
+</ul>
