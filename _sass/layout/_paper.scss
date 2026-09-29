@@ -16,23 +16,32 @@
   border-bottom: 1px solid var(--rs-border);
 }
 
-/* The venue is a small black flag sitting above the title: white uppercase
-   text on a solid dark ground, so the venue/journal is the first thing the
-   eye lands on. The ground is black in both themes, which keeps the flag
-   legible on the light and the dark surface alike. A paper that is only on
-   arXiv reads "arXiv preprint" here; an accepted paper names its venue and
-   nothing else — no preprint id after it. */
+/* The venue label above the title. A paper that is still only on arXiv simply
+   names its status in the accent colour; a paper that has been accepted
+   somewhere carries a solid flag instead, so the venue is the first thing the
+   eye lands on. The flag borrows the primary button's fill — accent with white
+   text in the light theme, the lighter accent with dark text in the dark theme
+   — which is what keeps it sitting on the page instead of fighting it. An
+   accepted paper names its venue and nothing else: no preprint id after it. */
 .paper-hero__venue {
-  display: inline-block;
   margin: 0 0 0.6rem;
-  padding: 0.32em 0.6em;
-  background: #000000;
-  border-radius: 2px;
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.07em;
   text-transform: uppercase;
+  color: var(--rs-accent);
+}
+
+.paper-hero__venue--accepted {
+  display: inline-block;
+  padding: 0.32em 0.6em;
+  background: var(--rs-accent);
+  border-radius: 5px;
   color: #ffffff;
+}
+
+html[data-theme="dark"] .paper-hero__venue--accepted {
+  color: #10151f;
 }
 
 .paper-hero__title {

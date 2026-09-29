@@ -14,7 +14,7 @@ description: 'A paradigm where LLMs evolve within wireless network-driven ecosys
 ---
 
 <section class="paper-hero">
-  <p class="paper-hero__venue">npj Wireless Technology &middot; 2025</p>
+  <p class="paper-hero__venue paper-hero__venue--accepted">npj Wireless Technology &middot; 2025</p>
   <h1 class="paper-hero__title">Ubiquitous Intelligence</h1>
   <p class="paper-hero__subtitle"><span class="lang-zh lang-block">基于无线网络驱动的大模型演化</span>Via Wireless Network-Driven LLMs Evolution</p>
   <p class="paper-hero__authors">Xingkun Yin, Feiran You, Hongyang Du, Kaibin Huang</p>
