@@ -562,45 +562,38 @@ html[data-theme="dark"] .hero__btn--primary:hover {
 }
 
 /* ==========================================================================
-   8. Research focus grid
+   8. Research focus
+   One flat block with a single accent rule down the left, rather than a grid
+   of separate cards.
    ========================================================================== */
 
-.research-focus-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.9rem;
-  margin: 1.1rem 0 1.6rem;
-}
-
-.research-focus-item {
-  padding: 0.85rem 1rem;
-  border: 1px solid var(--rs-border);
+.research-focus {
+  margin: 1.2rem 0 1.8rem;
+  padding: 1.1rem 1.3rem 1.1rem 1.4rem;
   border-left: 3px solid var(--rs-accent);
   border-radius: 0 var(--rs-radius-sm) var(--rs-radius-sm) 0;
   background: var(--rs-surface);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.research-focus-item:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--rs-shadow-sm);
-}
-
-.research-focus-item h3 {
-  margin: 0 0 0.4rem;
+.research-focus h3 {
+  margin: 1.6rem 0 0.4rem;
   padding: 0;
   border: 0;
-  color: var(--rs-accent);
-  font-size: 0.98rem;
+  color: var(--rs-heading);
+  font-size: 1rem;
   font-weight: 700;
-  line-height: 1.35;
+  line-height: 1.4;
 }
 
-.research-focus-item p {
+.research-focus h3:first-child {
+  margin-top: 0;
+}
+
+.research-focus p {
   margin: 0;
   color: var(--rs-body);
-  font-size: 0.89rem;
-  line-height: 1.6;
+  font-size: 0.92rem;
+  line-height: 1.65;
 }
 
 /* ==========================================================================
@@ -773,8 +766,8 @@ html[data-theme="dark"] .pub-card__image {
     font-size: 0.72rem;
   }
 
-  .research-focus-grid {
-    grid-template-columns: 1fr;
+  .research-focus {
+    padding: 0.9rem 1rem 0.9rem 1.1rem;
   }
 
   .hero {
