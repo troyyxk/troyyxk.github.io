@@ -200,9 +200,30 @@ html[data-theme="dark"] .lang-toggle__button.is-active {
   color: var(--rs-accent);
 }
 
-.masthead__menu-item.selected a {
+/* The current page is marked with a flat accent underline. The theme already
+   draws a 2px bottom border on the selected item, and the pill radius used for
+   hover turned that border into a capsule outline; owning the border here keeps
+   the indicator a single clean line and stops it competing with the filled
+   language toggle sitting next to it. */
+.masthead__menu-item.selected a,
+.masthead__menu-item.selected a:hover {
+  position: relative;
   color: var(--rs-accent);
-  background: var(--rs-accent-soft);
+  background: transparent;
+  border-bottom: 0;
+  border-radius: 0;
+  font-weight: 700;
+}
+
+.masthead__menu-item.selected a::after {
+  content: "";
+  position: absolute;
+  left: 0.7em;
+  right: 0.7em;
+  bottom: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--rs-accent);
 }
 
 /* The theme anchors the hamburger as a fixed 40px-tall box to the top of the
@@ -240,6 +261,12 @@ html[data-theme="dark"] .lang-toggle__button.is-active {
 .masthead__menu-item--lg.selected a:hover {
   background: transparent;
   color: var(--rs-accent);
+}
+
+/* The wordmark is selected on the homepage too, but it never takes the
+   underline indicator. */
+.masthead__menu-item--lg.selected a::after {
+  content: none;
 }
 
 /* ==========================================================================
