@@ -9,8 +9,8 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "Xingkun Yin"          # Shown in the masthead (English)
-title_zh                 : "尹星锟"                # Shown in the masthead when 中文 is selected
+title                    : "Yin, Xingkun's Page"  # Wordmark in the masthead and the <title> suffix
+title_zh                 : "尹星锟的主页"           # Masthead wordmark when 中文 is selected
 title_separator          : "-"
 name                     : &name "Xingkun Yin"    # Shown in the footer copyright line
 description              : &description "Xingkun Yin is a first-year Ph.D. student at NICE Lab, The University of Hong Kong, working on LLM architecture, LLM memory, experience scaling and video generation."

@@ -205,14 +205,30 @@ html[data-theme="dark"] .lang-toggle__button.is-active {
   background: var(--rs-accent-soft);
 }
 
-.masthead__menu-item--lg a {
-  font-size: 1.02rem;
-  font-weight: 800;
-  letter-spacing: -0.01em;
-  color: var(--rs-heading);
+/* The site name is a wordmark, not a nav button: no pill, no underline, no
+   border. It is also deliberately one step larger than the nav links. */
+.masthead__menu-item--lg {
+  padding-right: 1em;
 }
 
-.masthead__menu-item--lg a:hover {
+.masthead__menu-item--lg a,
+.masthead__menu-item--lg.selected a {
+  padding: 0.3em 0;
+  border: 0;
+  border-bottom: 0;
+  border-radius: 0;
+  background: transparent;
+  font-size: 1.28rem;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--rs-heading);
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.masthead__menu-item--lg a:hover,
+.masthead__menu-item--lg.selected a:hover {
   background: transparent;
   color: var(--rs-accent);
 }
@@ -669,6 +685,18 @@ html[data-theme="dark"] .pub-card__image {
     gap: 0.5rem;
   }
 
+  /* The wordmark is long, so it steps back down on small screens to leave
+     room for the hamburger, the theme button and the language toggle. */
+  .masthead__menu-item--lg {
+    padding-right: 0.5em;
+  }
+
+  .masthead__menu-item--lg a,
+  .masthead__menu-item--lg.selected a {
+    font-size: 1.02rem;
+    letter-spacing: -0.03em;
+  }
+
   .masthead__controls {
     gap: 0.25rem;
   }
@@ -716,5 +744,25 @@ html[data-theme="dark"] .pub-card__image {
 
   .pub-card {
     padding: 1.1rem 1.05rem;
+  }
+}
+
+/* Very narrow phones: keep the wordmark, hamburger and language toggle on a
+   single row without any horizontal overflow. */
+@media (max-width: 26.25em) {
+  .masthead__menu-item--lg a,
+  .masthead__menu-item--lg.selected a {
+    font-size: 0.9rem;
+  }
+
+  .masthead__icon-btn {
+    width: 26px;
+    height: 26px;
+    font-size: 0.85rem;
+  }
+
+  .lang-toggle__button {
+    padding: 0.26rem 0.42rem;
+    font-size: 0.68rem;
   }
 }
