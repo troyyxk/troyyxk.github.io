@@ -10,6 +10,36 @@
   display: none;
 }
 
+/* A publication page has no profile sidebar (see _config.yml): the paper is the
+   page. Nothing has to sit beside the column any more, so it takes the whole
+   shell instead of the theme's 10-of-12 span with a right-hand suffix, which
+   left a wide empty gutter on the right. */
+#main:has(.paper-hero) .page {
+  width: 100%;
+  float: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* One way back, top-left, where the sidebar used to start. The arrow is the
+   icon; the label follows the language switch. */
+.paper-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  margin: 0 0 1.2rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--rs-muted);
+  text-decoration: none;
+}
+
+.paper-back:hover,
+.paper-back:focus {
+  color: var(--rs-accent);
+  text-decoration: none;
+}
+
 .paper-hero {
   margin: 0 0 1.5rem;
   padding: 0 0 1.25rem;

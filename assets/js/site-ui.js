@@ -51,6 +51,35 @@
 })();
 
 /* ==========================================================================
+   Back links
+   --------------------------------------------------------------------------
+   A publication page opens with a single "Back" link. It returns to whatever
+   the reader came from when there is a history to go back to, and falls back
+   to its href (the publication list) when the page was opened directly.
+   ========================================================================== */
+
+(function () {
+  function init() {
+    var links = document.querySelectorAll('[data-back]');
+
+    Array.prototype.forEach.call(links, function (link) {
+      link.addEventListener('click', function (event) {
+        if (window.history.length > 1) {
+          event.preventDefault();
+          window.history.back();
+        }
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+
+/* ==========================================================================
    One-click copy for code blocks
    --------------------------------------------------------------------------
    Each code block gets a button in the corner the theme's decorative "</>"

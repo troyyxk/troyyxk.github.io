@@ -302,7 +302,9 @@ defaults:
       type: publications
     values:
       layout: single
-      author_profile: true
+      # A publication page is a project page for the paper: no profile sidebar,
+      # so the paper itself gets the full column (see _sass/layout/_paper.scss).
+      author_profile: false
       share: true
       comments: true
   # _portfolio
