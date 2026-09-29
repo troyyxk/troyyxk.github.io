@@ -45,7 +45,17 @@
     <h2 class="archive__item-title">
       {% if post.collection == 'publications' and post.badge %}
         {% assign badge_parts = post.badge | split: "|" %}
-        <span class="pub-badge"><span class="pub-badge__venue">{{ badge_parts[0] | strip }}</span>{% if badge_parts[1] %}<span class="pub-badge__year">{{ badge_parts[1] | strip }}</span>{% endif %}</span>
+        {% assign badge_venue = badge_parts[0] | strip %}
+        {% assign badge_year = badge_parts[1] | strip %}
+        {% assign badge_key = badge_venue | downcase %}
+        {% if badge_key contains 'arxiv' %}
+          {% assign badge_tone = 'archive' %}
+        {% elsif badge_year == '' %}
+          {% assign badge_tone = 'pending' %}
+        {% else %}
+          {% assign badge_tone = 'accepted' %}
+        {% endif %}
+        <span class="pub-badge pub-badge--{{ badge_tone }}"><span class="pub-badge__venue">{{ badge_venue }}</span>{% if badge_year != '' %}<span class="pub-badge__year">{{ badge_year }}</span>{% endif %}</span>
       {% endif %}
       <span itemprop="headline">
       {% if post.link %}

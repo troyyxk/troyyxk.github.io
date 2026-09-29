@@ -677,9 +677,16 @@ html[data-theme="dark"] .hero__btn--primary:hover {
    ========================================================================== */
 
 /* Venue badge: two-tone label sitting inline before a paper title. The venue
-   half is neutral, the year half is red, so the acceptance venue is scannable
-   at a glance. Set `badge: 'Venue|Year'` on a publication; omit the year part
-   for a status-only label. */
+   half is neutral and the year half carries the status, so it is scannable at
+   a glance:
+
+     accepted venue  -> blue   (default; anything with a year)
+     arXiv preprint  -> red    (`.pub-badge--archive`)
+     no year         -> grey   (`.pub-badge--pending`, e.g. "Under review",
+                                which also has no year half to colour)
+
+   Set `badge: 'Venue|Year'` on a publication; omit the year part for a
+   status-only label. */
 .pub-badge {
   display: inline-flex;
   align-items: stretch;
@@ -702,8 +709,12 @@ html[data-theme="dark"] .hero__btn--primary:hover {
 
 .pub-badge__year {
   padding: 0.4em 0.5em;
-  background: #c0392b;
+  background: #2563eb;
   color: #ffffff;
+}
+
+.pub-badge--archive .pub-badge__year {
+  background: #c0392b;
 }
 
 html[data-theme="dark"] .pub-badge__venue {
