@@ -95,7 +95,7 @@ redirect_from:
     <span class="news-list__date">2025.11</span>
     <span class="news-list__text">
       <span class="rs-tag"><span class="lang-en lang-inline">Paper</span><span class="lang-zh lang-inline">论文</span></span>
-      <span class="lang-en lang-inline"><a href="https://www.nature.com/articles/s44386-025-00010-7">Ubiquitous Intelligence Via Wireless Network-Driven LLMs Evolution</a> was accepted to <strong>npj Wireless Technology</strong>!</span><span class="lang-zh lang-inline">论文<a href="https://www.nature.com/articles/s44386-025-00010-7">Ubiquitous Intelligence Via Wireless Network-Driven LLMs Evolution</a>被 <strong>npj Wireless Technology</strong> 接收！</span>
+      <span class="lang-en lang-inline"><a href="https://www.nature.com/articles/s44459-025-00015-w">Ubiquitous Intelligence Via Wireless Network-Driven LLMs Evolution</a> was accepted to <strong>npj Wireless Technology</strong>!</span><span class="lang-zh lang-inline">论文<a href="https://www.nature.com/articles/s44459-025-00015-w">Ubiquitous Intelligence Via Wireless Network-Driven LLMs Evolution</a>被 <strong>npj Wireless Technology</strong> 接收！</span>
     </span>
   </li>
   <li>

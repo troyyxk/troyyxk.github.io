@@ -6,7 +6,7 @@ badge: 'npj Wireless Technology|2025'
 permalink: /publication/2025-01-01-ubiquitous-intelligence
 image: /publications/paper_imgs/2025-01-01-ubiquitous-intelligence.png
 venue: 'npj Wireless Technology'
-paperurl: 'https://www.nature.com/articles/s44386-025-00010-7'
+paperurl: 'https://www.nature.com/articles/s44459-025-00015-w'
 # Keep the publication card identical to the other entries: no auto-excerpt
 # from the first paragraph of the article body (only `description` is shown).
 excerpt_separator: ""
@@ -20,7 +20,7 @@ description_zh: '一种让大模型在无线网络驱动的生态中、通过网
   <p class="paper-hero__subtitle"><span class="lang-zh lang-block">泛在智能：基于无线网络驱动的大模型演化</span>{{ page.title }}</p>
   <p class="paper-hero__authors">Xingkun Yin, Feiran You, Hongyang Du, Kaibin Huang</p>
   <div class="paper-hero__actions">
-    <a class="paper-btn paper-btn--primary" href="https://www.nature.com/articles/s44386-025-00010-7"><i class="fa-solid fa-file-lines" aria-hidden="true"></i><span class="lang-en lang-inline">Paper (npj)</span><span class="lang-zh lang-inline">论文全文（npj）</span></a>
+    <a class="paper-btn paper-btn--primary" href="https://www.nature.com/articles/s44459-025-00015-w"><i class="fa-solid fa-file-lines" aria-hidden="true"></i><span class="lang-en lang-inline">Paper (npj)</span><span class="lang-zh lang-inline">论文全文（npj）</span></a>
     <a class="paper-btn" href="#citation"><i class="fa-solid fa-quote-right" aria-hidden="true"></i><span class="lang-en lang-inline">Citation</span><span class="lang-zh lang-inline">引用</span></a>
   </div>
 </section>
@@ -109,4 +109,4 @@ description_zh: '一种让大模型在无线网络驱动的生态中、通过网
 }
 ```
 
-<p><span class="lang-en lang-inline">The published version is available at <a href="https://www.nature.com/articles/s44386-025-00010-7">npj Wireless Technology</a>, with a preprint at <a href="https://arxiv.org/abs/2509.08400">arXiv:2509.08400</a>.</span><span class="lang-zh lang-inline">正式发表版本见 <a href="https://www.nature.com/articles/s44386-025-00010-7">npj Wireless Technology</a>，预印本见 <a href="https://arxiv.org/abs/2509.08400">arXiv:2509.08400</a>。</span></p>
+<p><span class="lang-en lang-inline">The published version is available at <a href="https://www.nature.com/articles/s44459-025-00015-w">npj Wireless Technology</a>, with a preprint at <a href="https://arxiv.org/abs/2509.08400">arXiv:2509.08400</a>.</span><span class="lang-zh lang-inline">正式发表版本见 <a href="https://www.nature.com/articles/s44459-025-00015-w">npj Wireless Technology</a>，预印本见 <a href="https://arxiv.org/abs/2509.08400">arXiv:2509.08400</a>。</span></p>
