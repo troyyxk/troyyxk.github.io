@@ -275,11 +275,24 @@ html[data-theme="dark"] .paper-hero__venue--accepted {
 
 /* A figure and its caption. The caption may carry both languages, in which
    case only the active one is shown (like every other bilingual block here).
-   A row holds two related diagrams side by side; they stack on a narrow
-   screen, and each keeps its own caption and number. */
+   The overview figure runs the full column because it is the one image that
+   carries the whole method; every supporting figure is deliberately smaller
+   than it, so the page has one main image instead of eight equal ones. */
 .paper-figure {
   display: block;
   margin: 1.5rem 0;
+}
+
+.paper-figure--wide {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.paper-figure--small {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .paper-figure figcaption {
@@ -287,8 +300,10 @@ html[data-theme="dark"] .paper-hero__venue--accepted {
   font-size: 0.86rem;
   line-height: 1.5;
   color: var(--rs-muted);
+  text-align: left;
 }
 
+/* Two related diagrams side by side; they stack on a narrow screen. */
 .paper-figure-row {
   display: grid;
   width: 100%;
