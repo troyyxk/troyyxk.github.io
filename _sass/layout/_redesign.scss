@@ -851,7 +851,72 @@ html[data-theme="dark"] .pub-card__image {
 }
 
 /* ==========================================================================
-   11. Responsive
+   11. Code blocks: one-click copy
+   --------------------------------------------------------------------------
+   Every highlighted block — the BibTeX on a publication page, code in a post —
+   carries a copy button in its top-right corner. The theme paints a decorative
+   "</>" there through `.highlighter-rouge:before`; this module hides that badge
+   and puts a real control in its place. The button is added by
+   assets/js/site-ui.js, so a reader without JavaScript keeps the badge instead
+   of a dead button.
+   ========================================================================== */
+
+.code-copy {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.5em 0.65em;
+  border: 0;
+  border-radius: 0 4px 0 7px;
+  background: #f2f3f3;
+  color: #46505f;
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+
+.code-copy:hover,
+.code-copy:focus-visible,
+.code-copy.is-copied {
+  background: var(--rs-accent);
+  color: #ffffff;
+}
+
+/* A code card keeps its light background in the dark theme, so the button does
+   too; only the accent it turns on hover needs a second look there. */
+html[data-theme="dark"] .code-copy:hover,
+html[data-theme="dark"] .code-copy:focus-visible,
+html[data-theme="dark"] .code-copy.is-copied {
+  color: #10151f;
+}
+
+.code-copy__done {
+  display: none;
+}
+
+.code-copy.is-copied .code-copy__idle {
+  display: none;
+}
+
+.code-copy.is-copied .code-copy__done {
+  display: inline;
+}
+
+/* The decorative corner glyph hands its corner over to the button. */
+.highlighter-rouge.has-code-copy:before,
+figure.highlight.has-code-copy:before {
+  display: none;
+}
+
+/* ==========================================================================
+   12. Responsive
    ========================================================================== */
 
 @media (max-width: 37.5em) {
