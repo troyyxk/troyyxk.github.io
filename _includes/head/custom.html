@@ -32,4 +32,4 @@
     document.documentElement.setAttribute('lang', lang === 'zh' ? 'zh-Hans' : 'en');
   })();
 </script>
-<script defer src="{{ base_path }}/assets/js/site-lang.js"></script>
+<script defer src="{{ base_path }}/assets/js/site-lang.js?v={{ site.time | date: '%s' }}"></script>
