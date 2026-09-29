@@ -54,8 +54,11 @@
    Back links
    --------------------------------------------------------------------------
    A publication page opens with a single "Back" link. It returns to whatever
-   the reader came from when there is a history to go back to, and falls back
-   to its href (the publication list) when the page was opened directly.
+   the reader came from when the page was reached by following a link, and
+   falls back to its href (the publication list) when the page was opened
+   directly. Both the referrer and a history entry are required: history.length
+   alone is also > 1 in a tab that started on about:blank, where going back
+   would land on an empty page.
    ========================================================================== */
 
 (function () {
@@ -64,7 +67,7 @@
 
     Array.prototype.forEach.call(links, function (link) {
       link.addEventListener('click', function (event) {
-        if (window.history.length > 1) {
+        if (document.referrer && window.history.length > 1) {
           event.preventDefault();
           window.history.back();
         }
