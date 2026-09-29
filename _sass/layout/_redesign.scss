@@ -384,6 +384,12 @@ img.author__avatar {
   color: var(--rs-body);
 }
 
+/* The About Me paragraphs use the tighter line rhythm of the Research
+   Interests block instead of the global 1.7, so the two read as one page. */
+.about-summary p {
+  line-height: 1.45;
+}
+
 .page__content h1,
 .page__content h2,
 .page__content h3,
