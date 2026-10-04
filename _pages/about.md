@@ -61,7 +61,12 @@ redirect_from:
 
 <h2 id="publications"><span class="lang-en lang-inline">Selected Publications</span><span class="lang-zh lang-inline">代表性论文</span></h2>
 
-{% assign selected = site.publications | reverse %}
+{% comment %}
+  The homepage shows the papers that carry a `featured` rank, ordered by that
+  rank, so the selection and its order are curated rather than "whatever is
+  newest". The full list on /publications/ is unaffected.
+{% endcomment %}
+{% assign selected = site.publications | where_exp: "p", "p.featured" | sort: "featured" %}
 {% for post in selected limit:3 %}
   {% include archive-single.html type="list" %}
 {% endfor %}
