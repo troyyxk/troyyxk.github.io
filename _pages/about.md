@@ -62,13 +62,20 @@ redirect_from:
 <h2 id="publications"><span class="lang-en lang-inline">Selected Publications</span><span class="lang-zh lang-inline">代表性论文</span></h2>
 
 {% comment %}
-  The homepage shows the papers that carry a `featured` rank, ordered by that
-  rank, so the selection and its order are curated rather than "whatever is
-  newest". The full list on /publications/ is unaffected.
+  Selected Publications is a hand-picked, hand-ordered list — NOT "the newest
+  three". To change what appears here, or in what order, edit the list below.
+  Each entry is a publication's `permalink` (the `permalink:` line in its file
+  under _publications/). Any entry that matches no publication leaves a
+  comment in the page source so a typo is visible rather than silent.
 {% endcomment %}
-{% assign selected = site.publications | where_exp: "p", "p.featured" | sort: "featured" %}
-{% for post in selected limit:3 %}
-  {% include archive-single.html type="list" %}
+{% assign featured = "/publication/2026-09-22-carnator,/publication/2026-01-27-glove,/publication/2026-06-11-coder" | split: "," %}
+{% for url in featured %}
+  {% assign post = site.publications | where: "url", url | first %}
+  {% if post %}
+    {% include archive-single.html type="list" %}
+  {% else %}
+    <!-- selected publication not found: {{ url }} -->
+  {% endif %}
 {% endfor %}
 
 <div class="rs-more">
